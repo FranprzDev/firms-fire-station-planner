@@ -1,11 +1,9 @@
-# Astro Runtime includes the following pre-installed providers packages: https://www.astronomer.io/docs/astro/runtime-image-architecture#provider-packages
 astronomer-cosmos>=1.4.0
 apache-airflow-providers-postgres==6
 apache-airflow-providers-common-sql>=1.20.0
 dbt-core>=1.7.0
 dbt-postgres>=1.7.0
 
-# Dependencias adicionales para Bronze layer y procesamiento de datos
 pandas>=2.0.0
 numpy>=1.24.0
-psycopg2-binary>=2.9.0  # Para conexiones PostgreSQL robustas
+psycopg2-binary>=2.9.0
