@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: raw
+    database: postgres
+    schema: public
+    tables:
+      - name: fires_raw
+        description: Raw fires data from MODIS CSV

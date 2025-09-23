@@ -1,0 +1,920 @@
+[0m05:01:06.364357 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7505d535a480>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7505d507cc20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7505d5368a40>]}
+
+
+============================== 05:01:06.404918 | a5291720-4f37-4ecd-9cac-aa62204bb2ab ==============================
+[0m05:01:06.404918 [info ] [MainThread]: Running with dbt=1.10.11
+[0m05:01:06.405788 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'warn_error': 'None', 'fail_fast': 'False', 'target_path': 'None', 'no_print': 'None', 'printer_width': '80', 'write_json': 'True', 'profiles_dir': '/usr/local/airflow/dags/dbt/fire_dbt', 'quiet': 'False', 'version_check': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': '/usr/local/airflow/dags/dbt/fire_dbt/logs', 'empty': 'False', 'invocation_command': 'dbt run', 'use_experimental_parser': 'False', 'log_format': 'default', 'debug': 'False', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'static_parser': 'True'}
+[0m05:01:06.411421 [error] [MainThread]: Encountered an error:
+Runtime Error
+  dbt cannot run because no profile was specified for this dbt project.
+  To specify a profile for this project, add a line like the this to
+  your dbt_project.yml file:
+  
+  profile: [profile name]
+  
+  Here, [profile name] should be replaced with a profile name
+  defined in your profiles.yml file. You can find profiles.yml here:
+  
+  /usr/local/airflow/dags/dbt/fire_dbt/profiles.yml
+  
+[0m05:01:06.413302 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.11072302, "process_in_blocks": "728", "process_kernel_time": 0.28657, "process_mem_max_rss": "123040", "process_out_blocks": "0", "process_user_time": 1.838829}
+[0m05:01:06.413884 [debug] [MainThread]: Command `dbt run` failed at 05:01:06.413787 after 0.11 seconds
+[0m05:01:06.414340 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7505d7767830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7505d4ab9d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7505d53de840>]}
+[0m05:01:06.414823 [debug] [MainThread]: Flushing usage events
+[0m05:01:07.658736 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m05:12:28.679083 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x747809b11c40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x747809891bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x747809b25280>]}
+
+
+============================== 05:12:28.720971 | bb9996a3-2391-4640-88d0-91c1c9dd9a75 ==============================
+[0m05:12:28.720971 [info ] [MainThread]: Running with dbt=1.10.11
+[0m05:12:28.721644 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'warn_error': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'profiles_dir': '/usr/local/airflow/dags/dbt/fire_dbt', 'cache_selected_only': 'False', 'invocation_command': 'dbt run', 'quiet': 'False', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'log_format': 'default', 'target_path': 'None', 'printer_width': '80', 'log_path': '/usr/local/airflow/dags/dbt/fire_dbt/logs', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'empty': 'False', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'static_parser': 'True', 'use_colors': 'True', 'version_check': 'True', 'no_print': 'None', 'partial_parse': 'True'}
+[0m05:12:28.727817 [info ] [MainThread]: target not specified in profile 'fires_project', using 'default'
+[0m05:12:28.728339 [error] [MainThread]: Encountered an error:
+Runtime Error
+  The profile 'fires_project' does not have a target named 'default'. The valid target names for this profile are:
+   - dev
+[0m05:12:28.729794 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.108145274, "process_in_blocks": "56200", "process_kernel_time": 0.298636, "process_mem_max_rss": "122872", "process_out_blocks": "0", "process_user_time": 1.892708}
+[0m05:12:28.730277 [debug] [MainThread]: Command `dbt run` failed at 05:12:28.730182 after 0.11 seconds
+[0m05:12:28.730689 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74780a10b950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x747809032120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x747809068440>]}
+[0m05:12:28.731117 [debug] [MainThread]: Flushing usage events
+[0m05:12:29.791985 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m05:13:16.143385 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d3fac1cf5f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d3fac23c530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d3fac414c20>]}
+
+
+============================== 05:13:16.189040 | 7ffc74bb-7634-47be-b9c6-b791b780ec53 ==============================
+[0m05:13:16.189040 [info ] [MainThread]: Running with dbt=1.10.11
+[0m05:13:16.189845 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'target_path': 'None', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'indirect_selection': 'eager', 'printer_width': '80', 'debug': 'False', 'use_colors': 'True', 'log_format': 'default', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True', 'invocation_command': 'dbt run', 'profiles_dir': '/usr/local/airflow/dags/dbt/fire_dbt', 'log_path': '/usr/local/airflow/dags/dbt/fire_dbt/logs', 'log_cache_events': 'False', 'static_parser': 'True', 'partial_parse': 'True', 'quiet': 'False', 'warn_error': 'None', 'introspect': 'True'}
+[0m05:13:16.197742 [info ] [MainThread]: target not specified in profile 'fires_project', using 'default'
+[0m05:13:16.198401 [error] [MainThread]: Encountered an error:
+Runtime Error
+  The profile 'fires_project' does not have a target named 'default'. The valid target names for this profile are:
+   - dev
+[0m05:13:16.199855 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.11445144, "process_in_blocks": "56520", "process_kernel_time": 0.295073, "process_mem_max_rss": "122904", "process_out_blocks": "0", "process_user_time": 1.894052}
+[0m05:13:16.200390 [debug] [MainThread]: Command `dbt run` failed at 05:13:16.200277 after 0.12 seconds
+[0m05:13:16.200809 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d3fac2cb710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d3fabe2acf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d3fae523860>]}
+[0m05:13:16.201239 [debug] [MainThread]: Flushing usage events
+[0m05:13:16.821317 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m05:14:15.455230 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x757188ffb8c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x757188542de0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75718870b110>]}
+
+
+============================== 05:14:15.499902 | 33c58034-bffb-46d3-8571-090ccd2e8ca2 ==============================
+[0m05:14:15.499902 [info ] [MainThread]: Running with dbt=1.10.11
+[0m05:14:15.500570 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'version_check': 'True', 'profiles_dir': '/usr/local/airflow/dags/dbt/fire_dbt', 'use_experimental_parser': 'False', 'no_print': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'fail_fast': 'False', 'partial_parse': 'True', 'target_path': 'None', 'empty': 'False', 'printer_width': '80', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'log_path': '/usr/local/airflow/dags/dbt/fire_dbt/logs', 'quiet': 'False', 'static_parser': 'True', 'log_cache_events': 'False', 'warn_error': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run', 'indirect_selection': 'eager', 'debug': 'False'}
+[0m05:14:15.506486 [info ] [MainThread]: target not specified in profile 'fires_project', using 'default'
+[0m05:14:15.506993 [error] [MainThread]: Encountered an error:
+Runtime Error
+  The profile 'fires_project' does not have a target named 'default'. The valid target names for this profile are:
+   - dev
+[0m05:14:15.508501 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.112531126, "process_in_blocks": "56520", "process_kernel_time": 0.327147, "process_mem_max_rss": "122376", "process_out_blocks": "0", "process_user_time": 1.923468}
+[0m05:14:15.509056 [debug] [MainThread]: Command `dbt run` failed at 05:14:15.508898 after 0.11 seconds
+[0m05:14:15.509512 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x757188713500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75718855cb00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x757188971c10>]}
+[0m05:14:15.509954 [debug] [MainThread]: Flushing usage events
+[0m05:14:16.679717 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m05:14:30.037899 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71367b0d9a00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71367d5d8f20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71367d5f0f80>]}
+
+
+============================== 05:14:30.075897 | 33f01a71-3e8d-4b5f-9d62-420dd925f47d ==============================
+[0m05:14:30.075897 [info ] [MainThread]: Running with dbt=1.10.11
+[0m05:14:30.076588 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'partial_parse': 'True', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'profiles_dir': '/usr/local/airflow/dags/dbt/fire_dbt', 'fail_fast': 'False', 'introspect': 'True', 'use_experimental_parser': 'False', 'printer_width': '80', 'version_check': 'True', 'static_parser': 'True', 'log_format': 'default', 'log_path': '/usr/local/airflow/dags/dbt/fire_dbt/logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'empty': 'False', 'write_json': 'True', 'invocation_command': 'dbt run', 'use_colors': 'True', 'target_path': 'None', 'warn_error': 'None'}
+[0m05:14:30.082984 [info ] [MainThread]: target not specified in profile 'fires_project', using 'default'
+[0m05:14:30.083705 [error] [MainThread]: Encountered an error:
+Runtime Error
+  The profile 'fires_project' does not have a target named 'default'. The valid target names for this profile are:
+   - dev
+[0m05:14:30.084937 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.104628675, "process_in_blocks": "0", "process_kernel_time": 0.310821, "process_mem_max_rss": "122976", "process_out_blocks": "0", "process_user_time": 1.89282}
+[0m05:14:30.085506 [debug] [MainThread]: Command `dbt run` failed at 05:14:30.085404 after 0.11 seconds
+[0m05:14:30.085955 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71367ef7ef90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71367aa76030>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71367b1093a0>]}
+[0m05:14:30.086429 [debug] [MainThread]: Flushing usage events
+[0m05:14:30.679916 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m05:14:37.660838 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb77be7d970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb77c7b0b30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb77c7c8890>]}
+
+
+============================== 05:14:37.699673 | ad0eef74-dd23-413b-afc8-55d84b044afd ==============================
+[0m05:14:37.699673 [info ] [MainThread]: Running with dbt=1.10.11
+[0m05:14:37.700429 [debug] [MainThread]: running dbt with arguments {'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt debug', 'fail_fast': 'False', 'quiet': 'False', 'warn_error': 'None', 'log_format': 'default', 'use_colors': 'True', 'version_check': 'True', 'target_path': 'None', 'static_parser': 'True', 'log_cache_events': 'False', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'introspect': 'True', 'cache_selected_only': 'False', 'log_path': '/usr/local/airflow/dags/dbt/fire_dbt/logs', 'no_print': 'None', 'debug': 'False', 'profiles_dir': '/usr/local/airflow/dags/dbt/fire_dbt', 'indirect_selection': 'eager', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'empty': 'None'}
+[0m05:14:37.729259 [info ] [MainThread]: dbt version: 1.10.11
+[0m05:14:37.729905 [info ] [MainThread]: python version: 3.12.11
+[0m05:14:37.730404 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m05:14:37.730913 [info ] [MainThread]: os info: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[0m05:14:37.740094 [info ] [MainThread]: target not specified in profile 'fires_project', using 'default'
+[0m05:14:37.740798 [info ] [MainThread]: Using profiles dir at /usr/local/airflow/dags/dbt/fire_dbt
+[0m05:14:37.741364 [info ] [MainThread]: Using profiles.yml file at /usr/local/airflow/dags/dbt/fire_dbt/profiles.yml
+[0m05:14:37.741801 [info ] [MainThread]: Using dbt_project.yml file at /usr/local/airflow/dags/dbt/fire_dbt/dbt_project.yml
+[0m05:14:37.798816 [info ] [MainThread]: Configuration:
+[0m05:14:37.799657 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m05:14:37.800164 [info ] [MainThread]:   dbt_project.yml file [[31mERROR invalid[0m]
+[0m05:14:37.800677 [info ] [MainThread]: Required dependencies:
+[0m05:14:37.801192 [debug] [MainThread]: Executing "git --help"
+[0m05:14:37.805992 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m05:14:37.806700 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m05:14:37.807331 [info ] [MainThread]: [31m3 checks failed:[0m
+[0m05:14:37.807828 [info ] [MainThread]: Profile loading failed for the following reason:
+Runtime Error
+  The profile 'fires_project' does not have a target named 'default'. The valid target names for this profile are:
+   - dev
+
+
+[0m05:14:37.808358 [info ] [MainThread]: Project loading failed for the following reason:
+Runtime Error
+  at path []: Additional properties are not allowed ('target' was unexpected)
+
+Error encountered in /usr/local/airflow/dags/dbt/fire_dbt/dbt_project.yml
+
+
+[0m05:14:37.808951 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH: "git"
+
+[0m05:14:37.810340 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.20945089, "process_in_blocks": "768", "process_kernel_time": 0.307861, "process_mem_max_rss": "122936", "process_out_blocks": "0", "process_user_time": 1.95912}
+[0m05:14:37.810893 [debug] [MainThread]: Command `dbt debug` failed at 05:14:37.810800 after 0.21 seconds
+[0m05:14:37.811377 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb77a33acf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb77a33cfb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb779d35130>]}
+[0m05:14:37.811916 [debug] [MainThread]: Flushing usage events
+[0m05:14:38.425390 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m05:14:47.729897 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7ecd54b4a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7ecddb4530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7ecdf1d2b0>]}
+
+
+============================== 05:14:47.769494 | 8f5a033e-1cdc-49c2-b7b2-b3cf29240364 ==============================
+[0m05:14:47.769494 [info ] [MainThread]: Running with dbt=1.10.11
+[0m05:14:47.770317 [debug] [MainThread]: running dbt with arguments {'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'profiles_dir': '/usr/local/airflow/dags/dbt/fire_dbt', 'write_json': 'True', 'log_format': 'default', 'cache_selected_only': 'False', 'invocation_command': 'dbt debug', 'indirect_selection': 'eager', 'warn_error': 'None', 'partial_parse': 'True', 'fail_fast': 'False', 'log_path': '/usr/local/airflow/dags/dbt/fire_dbt/logs', 'introspect': 'True', 'log_cache_events': 'False', 'use_experimental_parser': 'False', 'debug': 'False', 'version_check': 'True', 'empty': 'None', 'use_colors': 'True', 'quiet': 'False', 'static_parser': 'True', 'target_path': 'None', 'no_print': 'None'}
+[0m05:14:47.788569 [info ] [MainThread]: dbt version: 1.10.11
+[0m05:14:47.789165 [info ] [MainThread]: python version: 3.12.11
+[0m05:14:47.789688 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m05:14:47.790157 [info ] [MainThread]: os info: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[0m05:14:47.800007 [info ] [MainThread]: target not specified in profile 'fires_project', using 'default'
+[0m05:14:47.800734 [info ] [MainThread]: Using profiles dir at /usr/local/airflow/dags/dbt/fire_dbt
+[0m05:14:47.801334 [info ] [MainThread]: Using profiles.yml file at /usr/local/airflow/dags/dbt/fire_dbt/profiles.yml
+[0m05:14:47.801808 [info ] [MainThread]: Using dbt_project.yml file at /usr/local/airflow/dags/dbt/fire_dbt/dbt_project.yml
+[0m05:14:47.898461 [info ] [MainThread]: Configuration:
+[0m05:14:47.899340 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m05:14:47.899980 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m05:14:47.900494 [info ] [MainThread]: Required dependencies:
+[0m05:14:47.901006 [debug] [MainThread]: Executing "git --help"
+[0m05:14:47.902465 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m05:14:47.902965 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m05:14:47.903497 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m05:14:47.903940 [info ] [MainThread]: Profile loading failed for the following reason:
+Runtime Error
+  The profile 'fires_project' does not have a target named 'default'. The valid target names for this profile are:
+   - dev
+
+
+[0m05:14:47.904446 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH: "git"
+
+[0m05:14:47.905582 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.23957731, "process_in_blocks": "0", "process_kernel_time": 0.326112, "process_mem_max_rss": "123000", "process_out_blocks": "0", "process_user_time": 1.968603}
+[0m05:14:47.906097 [debug] [MainThread]: Command `dbt debug` failed at 05:14:47.906004 after 0.24 seconds
+[0m05:14:47.906603 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7ecdd1d190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7ecd6928a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7ecd71d880>]}
+[0m05:14:47.907132 [debug] [MainThread]: Flushing usage events
+[0m05:14:48.552452 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m05:15:26.489634 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78a497a12e70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78a49708ae10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78a499521970>]}
+
+
+============================== 05:15:26.530377 | 09eb88ca-e597-4238-8773-bcfd1616def6 ==============================
+[0m05:15:26.530377 [info ] [MainThread]: Running with dbt=1.10.11
+[0m05:15:26.531106 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'profiles_dir': '/usr/local/airflow/dags/dbt/fire_dbt', 'indirect_selection': 'eager', 'target_path': 'None', 'use_experimental_parser': 'False', 'version_check': 'True', 'fail_fast': 'False', 'invocation_command': 'dbt debug', 'partial_parse': 'True', 'use_colors': 'True', 'quiet': 'False', 'printer_width': '80', 'send_anonymous_usage_stats': 'True', 'log_path': '/usr/local/airflow/dags/dbt/fire_dbt/logs', 'write_json': 'True', 'debug': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'log_format': 'default', 'empty': 'None', 'no_print': 'None', 'warn_error': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False'}
+[0m05:15:26.548254 [info ] [MainThread]: dbt version: 1.10.11
+[0m05:15:26.548921 [info ] [MainThread]: python version: 3.12.11
+[0m05:15:26.549463 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m05:15:26.550001 [info ] [MainThread]: os info: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[0m05:15:26.559102 [info ] [MainThread]: target not specified in profile 'fires_project', using 'default'
+[0m05:15:26.559701 [info ] [MainThread]: Using profiles dir at /usr/local/airflow/dags/dbt/fire_dbt
+[0m05:15:26.560149 [info ] [MainThread]: Using profiles.yml file at /usr/local/airflow/dags/dbt/fire_dbt/profiles.yml
+[0m05:15:26.560632 [info ] [MainThread]: Using dbt_project.yml file at /usr/local/airflow/dags/dbt/fire_dbt/dbt_project.yml
+[0m05:15:26.617633 [info ] [MainThread]: Configuration:
+[0m05:15:26.618309 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m05:15:26.618834 [info ] [MainThread]:   dbt_project.yml file [[31mERROR invalid[0m]
+[0m05:15:26.619372 [info ] [MainThread]: Required dependencies:
+[0m05:15:26.620029 [debug] [MainThread]: Executing "git --help"
+[0m05:15:26.621711 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m05:15:26.622217 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m05:15:26.622791 [info ] [MainThread]: [31m3 checks failed:[0m
+[0m05:15:26.623308 [info ] [MainThread]: Profile loading failed for the following reason:
+Runtime Error
+  The profile 'fires_project' does not have a target named 'default'. The valid target names for this profile are:
+   - dev
+
+
+[0m05:15:26.623827 [info ] [MainThread]: Project loading failed for the following reason:
+Runtime Error
+  at path []: Additional properties are not allowed ('target' was unexpected)
+
+Error encountered in /usr/local/airflow/dags/dbt/fire_dbt/dbt_project.yml
+
+
+[0m05:15:26.624306 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH: "git"
+
+[0m05:15:26.625526 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.19257554, "process_in_blocks": "0", "process_kernel_time": 0.29175, "process_mem_max_rss": "123084", "process_out_blocks": "0", "process_user_time": 1.85841}
+[0m05:15:26.626059 [debug] [MainThread]: Command `dbt debug` failed at 05:15:26.625960 after 0.19 seconds
+[0m05:15:26.626516 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78a497a14980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78a4967c3860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78a4967c21e0>]}
+[0m05:15:26.626991 [debug] [MainThread]: Flushing usage events
+[0m05:15:27.842136 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m05:16:50.852931 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bc4141e4650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bc415eec770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bc413a60c20>]}
+
+
+============================== 05:16:50.894095 | 3d00c53c-503f-48a8-ac26-2c1e5e148794 ==============================
+[0m05:16:50.894095 [info ] [MainThread]: Running with dbt=1.10.11
+[0m05:16:50.894802 [debug] [MainThread]: running dbt with arguments {'use_experimental_parser': 'False', 'log_path': '/usr/local/airflow/dags/dbt/fire_dbt/logs', 'use_colors': 'True', 'quiet': 'False', 'warn_error': 'None', 'cache_selected_only': 'False', 'profiles_dir': '/usr/local/airflow/dags/dbt/fire_dbt', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True', 'printer_width': '80', 'partial_parse': 'True', 'fail_fast': 'False', 'log_cache_events': 'False', 'debug': 'False', 'version_check': 'True', 'introspect': 'True', 'log_format': 'default', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'empty': 'None', 'no_print': 'None'}
+[0m05:16:50.911086 [info ] [MainThread]: dbt version: 1.10.11
+[0m05:16:50.911651 [info ] [MainThread]: python version: 3.12.11
+[0m05:16:50.912196 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m05:16:50.912732 [info ] [MainThread]: os info: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[0m05:16:50.921636 [info ] [MainThread]: target not specified in profile 'fires_project', using 'default'
+[0m05:16:50.922236 [info ] [MainThread]: Using profiles dir at /usr/local/airflow/dags/dbt/fire_dbt
+[0m05:16:50.922769 [info ] [MainThread]: Using profiles.yml file at /usr/local/airflow/dags/dbt/fire_dbt/profiles.yml
+[0m05:16:50.923195 [info ] [MainThread]: Using dbt_project.yml file at /usr/local/airflow/dags/dbt/fire_dbt/dbt_project.yml
+[0m05:16:51.008926 [info ] [MainThread]: Configuration:
+[0m05:16:51.009627 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m05:16:51.010081 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m05:16:51.010528 [info ] [MainThread]: Required dependencies:
+[0m05:16:51.010989 [debug] [MainThread]: Executing "git --help"
+[0m05:16:51.012333 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m05:16:51.012772 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m05:16:51.013289 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m05:16:51.013728 [info ] [MainThread]: Profile loading failed for the following reason:
+Runtime Error
+  The profile 'fires_project' does not have a target named 'default'. The valid target names for this profile are:
+   - dev
+
+
+[0m05:16:51.014214 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH: "git"
+
+[0m05:16:51.015240 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.21890254, "process_in_blocks": "0", "process_kernel_time": 0.252374, "process_mem_max_rss": "122908", "process_out_blocks": "0", "process_user_time": 1.910834}
+[0m05:16:51.015732 [debug] [MainThread]: Command `dbt debug` failed at 05:16:51.015636 after 0.22 seconds
+[0m05:16:51.016169 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bc413bc6810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bc4141e8050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bc413a60c20>]}
+[0m05:16:51.016595 [debug] [MainThread]: Flushing usage events
+[0m05:16:52.242465 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m05:17:09.826645 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76f87bad30e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76f87d455580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76f87dd0c650>]}
+
+
+============================== 05:17:09.867665 | 565b2037-c749-4933-a69a-e8921a5830a8 ==============================
+[0m05:17:09.867665 [info ] [MainThread]: Running with dbt=1.10.11
+[0m05:17:09.868652 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'invocation_command': 'dbt debug', 'empty': 'None', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'target_path': 'None', 'log_format': 'default', 'partial_parse': 'True', 'use_colors': 'True', 'version_check': 'True', 'introspect': 'True', 'cache_selected_only': 'False', 'quiet': 'False', 'use_experimental_parser': 'False', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': '/usr/local/airflow/dags/dbt/fire_dbt/logs', 'debug': 'False', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'profiles_dir': '/usr/local/airflow/dags/dbt/fire_dbt', 'printer_width': '80', 'warn_error': 'None', 'fail_fast': 'False'}
+[0m05:17:09.885037 [info ] [MainThread]: dbt version: 1.10.11
+[0m05:17:09.885590 [info ] [MainThread]: python version: 3.12.11
+[0m05:17:09.886147 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m05:17:09.886652 [info ] [MainThread]: os info: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[0m05:17:09.895165 [info ] [MainThread]: target not specified in profile 'fires_project', using 'default'
+[0m05:17:09.895712 [info ] [MainThread]: Using profiles dir at /usr/local/airflow/dags/dbt/fire_dbt
+[0m05:17:09.896163 [info ] [MainThread]: Using profiles.yml file at /usr/local/airflow/dags/dbt/fire_dbt/profiles.yml
+[0m05:17:09.896653 [info ] [MainThread]: Using dbt_project.yml file at /usr/local/airflow/dags/dbt/fire_dbt/dbt_project.yml
+[0m05:17:09.983366 [info ] [MainThread]: Configuration:
+[0m05:17:09.984154 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m05:17:09.984780 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m05:17:09.985297 [info ] [MainThread]: Required dependencies:
+[0m05:17:09.985803 [debug] [MainThread]: Executing "git --help"
+[0m05:17:09.987136 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m05:17:09.987573 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m05:17:09.988020 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m05:17:09.988486 [info ] [MainThread]: Profile loading failed for the following reason:
+Runtime Error
+  The profile 'fires_project' does not have a target named 'default'. The valid target names for this profile are:
+   - dev
+
+
+[0m05:17:09.988968 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH: "git"
+
+[0m05:17:09.990023 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.22047564, "process_in_blocks": "0", "process_kernel_time": 0.294966, "process_mem_max_rss": "122960", "process_out_blocks": "0", "process_user_time": 1.885395}
+[0m05:17:09.990517 [debug] [MainThread]: Command `dbt debug` failed at 05:17:09.990430 after 0.22 seconds
+[0m05:17:09.990942 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76f87b34c5f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76f87d455580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76f87da55fa0>]}
+[0m05:17:09.991390 [debug] [MainThread]: Flushing usage events
+[0m05:17:10.662337 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m05:18:35.558560 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x720c37f6d9a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x720c3783c5f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x720c3814d580>]}
+
+
+============================== 05:18:35.600670 | 0d82ce88-7859-4334-ae1f-e26e8eb08c68 ==============================
+[0m05:18:35.600670 [info ] [MainThread]: Running with dbt=1.10.11
+[0m05:18:35.601418 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'version_check': 'True', 'no_print': 'None', 'profiles_dir': '/usr/local/airflow/dags/dbt/fire_dbt', 'indirect_selection': 'eager', 'static_parser': 'True', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'introspect': 'True', 'log_format': 'default', 'cache_selected_only': 'False', 'debug': 'False', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'partial_parse': 'True', 'printer_width': '80', 'quiet': 'False', 'empty': 'None', 'log_path': '/usr/local/airflow/dags/dbt/fire_dbt/logs', 'invocation_command': 'dbt debug'}
+[0m05:18:35.618398 [info ] [MainThread]: dbt version: 1.10.11
+[0m05:18:35.619014 [info ] [MainThread]: python version: 3.12.11
+[0m05:18:35.619505 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m05:18:35.619979 [info ] [MainThread]: os info: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[0m05:18:35.628784 [info ] [MainThread]: target not specified in profile 'fires_project', using 'default'
+[0m05:18:35.700188 [info ] [MainThread]: target not specified in profile 'fires_project', using 'default'
+[0m05:18:35.701303 [info ] [MainThread]: Using profiles dir at /usr/local/airflow/dags/dbt/fire_dbt
+[0m05:18:35.702128 [info ] [MainThread]: Using profiles.yml file at /usr/local/airflow/dags/dbt/fire_dbt/profiles.yml
+[0m05:18:35.702861 [info ] [MainThread]: Using dbt_project.yml file at /usr/local/airflow/dags/dbt/fire_dbt/dbt_project.yml
+[0m05:18:35.704174 [info ] [MainThread]: adapter type: postgres
+[0m05:18:35.704751 [info ] [MainThread]: adapter version: 1.9.1
+[0m05:18:35.809948 [info ] [MainThread]: Configuration:
+[0m05:18:35.810671 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m05:18:35.811284 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m05:18:35.811752 [info ] [MainThread]: Required dependencies:
+[0m05:18:35.812218 [debug] [MainThread]: Executing "git --help"
+[0m05:18:35.813619 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m05:18:35.814083 [info ] [MainThread]: Connection:
+[0m05:18:35.814628 [info ] [MainThread]:   host: host.docker.internal
+[0m05:18:35.815072 [info ] [MainThread]:   port: 5432
+[0m05:18:35.815524 [info ] [MainThread]:   user: postgres
+[0m05:18:35.815968 [info ] [MainThread]:   database: postgres
+[0m05:18:35.816433 [info ] [MainThread]:   schema: public
+[0m05:18:35.816867 [info ] [MainThread]:   connect_timeout: 10
+[0m05:18:35.817378 [info ] [MainThread]:   role: None
+[0m05:18:35.817829 [info ] [MainThread]:   search_path: None
+[0m05:18:35.818273 [info ] [MainThread]:   keepalives_idle: 0
+[0m05:18:35.818726 [info ] [MainThread]:   sslmode: None
+[0m05:18:35.819241 [info ] [MainThread]:   sslcert: None
+[0m05:18:35.819676 [info ] [MainThread]:   sslkey: None
+[0m05:18:35.820103 [info ] [MainThread]:   sslrootcert: None
+[0m05:18:35.820502 [info ] [MainThread]:   application_name: dbt
+[0m05:18:35.820947 [info ] [MainThread]:   retries: 1
+[0m05:18:35.821582 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m05:18:35.899718 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m05:18:35.943330 [debug] [MainThread]: Using postgres connection "debug"
+[0m05:18:35.943950 [debug] [MainThread]: On debug: select 1 as id
+[0m05:18:35.944378 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m05:18:35.954948 [debug] [MainThread]: SQL status: SELECT 1 in 0.010 seconds
+[0m05:18:35.956187 [debug] [MainThread]: On debug: Close
+[0m05:18:35.956698 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m05:18:35.957181 [info ] [MainThread]: [31m1 check failed:[0m
+[0m05:18:35.957691 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH: "git"
+
+[0m05:18:35.958826 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.45813006, "process_in_blocks": "4056", "process_kernel_time": 0.328092, "process_mem_max_rss": "122988", "process_out_blocks": "0", "process_user_time": 2.200622}
+[0m05:18:35.959348 [debug] [MainThread]: Command `dbt debug` failed at 05:18:35.959252 after 0.46 seconds
+[0m05:18:35.959771 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m05:18:35.960197 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x720c3859aed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x720c37690650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x720c3749b290>]}
+[0m05:18:35.960628 [debug] [MainThread]: Flushing usage events
+[0m05:18:36.950369 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m05:18:47.704254 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7368db96fad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7368da8a0f80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7368db9efe00>]}
+
+
+============================== 05:18:47.747772 | f8906437-8587-4266-b1b1-763c070dc1b9 ==============================
+[0m05:18:47.747772 [info ] [MainThread]: Running with dbt=1.10.11
+[0m05:18:47.748538 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'debug': 'False', 'invocation_command': 'dbt run', 'profiles_dir': '/usr/local/airflow/dags/dbt/fire_dbt', 'write_json': 'True', 'log_path': '/usr/local/airflow/dags/dbt/fire_dbt/logs', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'printer_width': '80', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'log_cache_events': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'warn_error': 'None', 'empty': 'False', 'version_check': 'True'}
+[0m05:18:47.754943 [info ] [MainThread]: target not specified in profile 'fires_project', using 'default'
+[0m05:18:48.020751 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f8906437-8587-4266-b1b1-763c070dc1b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7368dd0a2270>]}
+[0m05:18:48.074854 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f8906437-8587-4266-b1b1-763c070dc1b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7368db01a150>]}
+[0m05:18:48.075976 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m05:18:48.160012 [debug] [MainThread]: checksum: 5335e1629744fab92fa7809c625edbb36f0d7063a879d6215c971798f27e66f9, vars: {}, profile: , target: , version: 1.10.11
+[0m05:18:48.162423 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m05:18:48.162960 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'f8906437-8587-4266-b1b1-763c070dc1b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7368da70b800>]}
+[0m05:18:49.011153 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f8906437-8587-4266-b1b1-763c070dc1b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7368db6391c0>]}
+[0m05:18:49.066275 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/manifest.json
+[0m05:18:49.071248 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/semantic_manifest.json
+[0m05:18:49.108052 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f8906437-8587-4266-b1b1-763c070dc1b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7368d955d130>]}
+[0m05:18:49.108729 [info ] [MainThread]: Found 2 models, 434 macros
+[0m05:18:49.109295 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f8906437-8587-4266-b1b1-763c070dc1b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7368da759970>]}
+[0m05:18:49.111200 [info ] [MainThread]: 
+[0m05:18:49.111831 [info ] [MainThread]: Concurrency: 1 threads (target='default')
+[0m05:18:49.112371 [info ] [MainThread]: 
+[0m05:18:49.113069 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m05:18:49.116957 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m05:18:49.165603 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m05:18:49.166484 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m05:18:49.167036 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m05:18:49.178171 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.011 seconds
+[0m05:18:49.179802 [debug] [ThreadPool]: On list_postgres: Close
+[0m05:18:49.181555 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_postgres, now list_postgres_public)
+[0m05:18:49.187161 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m05:18:49.187673 [debug] [ThreadPool]: On list_postgres_public: BEGIN
+[0m05:18:49.188088 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m05:18:49.197054 [debug] [ThreadPool]: SQL status: BEGIN in 0.009 seconds
+[0m05:18:49.197649 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m05:18:49.198207 [debug] [ThreadPool]: On list_postgres_public: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "list_postgres_public"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m05:18:49.208179 [debug] [ThreadPool]: SQL status: SELECT 46 in 0.009 seconds
+[0m05:18:49.210118 [debug] [ThreadPool]: On list_postgres_public: ROLLBACK
+[0m05:18:49.211262 [debug] [ThreadPool]: On list_postgres_public: Close
+[0m05:18:49.220447 [debug] [MainThread]: Using postgres connection "master"
+[0m05:18:49.220974 [debug] [MainThread]: On master: BEGIN
+[0m05:18:49.221385 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m05:18:49.230771 [debug] [MainThread]: SQL status: BEGIN in 0.009 seconds
+[0m05:18:49.231451 [debug] [MainThread]: Using postgres connection "master"
+[0m05:18:49.231999 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m05:18:49.242180 [debug] [MainThread]: SQL status: SELECT 0 in 0.010 seconds
+[0m05:18:49.243615 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f8906437-8587-4266-b1b1-763c070dc1b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7368da7098b0>]}
+[0m05:18:49.244208 [debug] [MainThread]: On master: ROLLBACK
+[0m05:18:49.245491 [debug] [MainThread]: Using postgres connection "master"
+[0m05:18:49.245975 [debug] [MainThread]: On master: BEGIN
+[0m05:18:49.247872 [debug] [MainThread]: SQL status: BEGIN in 0.002 seconds
+[0m05:18:49.248283 [debug] [MainThread]: On master: COMMIT
+[0m05:18:49.248680 [debug] [MainThread]: Using postgres connection "master"
+[0m05:18:49.249043 [debug] [MainThread]: On master: COMMIT
+[0m05:18:49.250138 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m05:18:49.250555 [debug] [MainThread]: On master: Close
+[0m05:18:49.254445 [debug] [Thread-1 (]: Began running node model.fires_dbt.model1
+[0m05:18:49.255135 [info ] [Thread-1 (]: 1 of 2 START sql view model public.model1 ...................................... [RUN]
+[0m05:18:49.255791 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_postgres_public, now model.fires_dbt.model1)
+[0m05:18:49.256251 [debug] [Thread-1 (]: Began compiling node model.fires_dbt.model1
+[0m05:18:49.266601 [debug] [Thread-1 (]: Compilation Error in model model1 (models/model1.sql)
+  Required var 'my_name' not found in config:
+  Vars supplied to model1 = {}
+[0m05:18:49.268691 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f8906437-8587-4266-b1b1-763c070dc1b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7368d952fa70>]}
+[0m05:18:49.269475 [error] [Thread-1 (]: 1 of 2 ERROR creating sql view model public.model1 ............................. [[31mERROR[0m in 0.01s]
+[0m05:18:49.270174 [debug] [Thread-1 (]: Finished running node model.fires_dbt.model1
+[0m05:18:49.270799 [debug] [Thread-4 (]: Marking all children of 'model.fires_dbt.model1' to be skipped because of status 'error'.  Reason: Compilation Error in model model1 (models/model1.sql)
+  Required var 'my_name' not found in config:
+  Vars supplied to model1 = {}.
+[0m05:18:49.272102 [debug] [Thread-1 (]: Began running node model.fires_dbt.model2
+[0m05:18:49.272715 [info ] [Thread-1 (]: 2 of 2 SKIP relation public.model2 ............................................. [[33mSKIP[0m]
+[0m05:18:49.273277 [debug] [Thread-1 (]: Finished running node model.fires_dbt.model2
+[0m05:18:49.274576 [debug] [MainThread]: Using postgres connection "master"
+[0m05:18:49.274956 [debug] [MainThread]: On master: BEGIN
+[0m05:18:49.275278 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m05:18:49.284490 [debug] [MainThread]: SQL status: BEGIN in 0.009 seconds
+[0m05:18:49.285146 [debug] [MainThread]: On master: COMMIT
+[0m05:18:49.285605 [debug] [MainThread]: Using postgres connection "master"
+[0m05:18:49.285990 [debug] [MainThread]: On master: COMMIT
+[0m05:18:49.287190 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m05:18:49.287621 [debug] [MainThread]: On master: Close
+[0m05:18:49.288192 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m05:18:49.288581 [debug] [MainThread]: Connection 'model.fires_dbt.model1' was properly closed.
+[0m05:18:49.289076 [info ] [MainThread]: 
+[0m05:18:49.289536 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 0.18 seconds (0.18s).
+[0m05:18:49.290369 [debug] [MainThread]: Command end result
+[0m05:18:49.313368 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/manifest.json
+[0m05:18:49.317957 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/semantic_manifest.json
+[0m05:18:49.326831 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/local/airflow/dags/dbt/fire_dbt/target/run_results.json
+[0m05:18:49.327367 [info ] [MainThread]: 
+[0m05:18:49.327908 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m05:18:49.328426 [info ] [MainThread]: 
+[0m05:18:49.329018 [error] [MainThread]: [31mFailure in model model1 (models/model1.sql)[0m
+[0m05:18:49.329535 [error] [MainThread]:   Compilation Error in model model1 (models/model1.sql)
+  Required var 'my_name' not found in config:
+  Vars supplied to model1 = {}
+[0m05:18:49.329995 [info ] [MainThread]: 
+[0m05:18:49.330497 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=1 NO-OP=0 TOTAL=2
+[0m05:18:49.331902 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 1.6843011, "process_in_blocks": "5064", "process_kernel_time": 0.369253, "process_mem_max_rss": "126276", "process_out_blocks": "0", "process_user_time": 3.030285}
+[0m05:18:49.332651 [debug] [MainThread]: Command `dbt run` failed at 05:18:49.332529 after 1.69 seconds
+[0m05:18:49.333194 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7368da7c9b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7368da7302c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7368db01a0f0>]}
+[0m05:18:49.333723 [debug] [MainThread]: Flushing usage events
+[0m05:18:49.970008 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m05:25:56.052732 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78176db8ee70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78176df8d460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78176f13c050>]}
+
+
+============================== 05:25:56.097163 | 78df600d-e2ad-4a40-9a8e-b6b909982412 ==============================
+[0m05:25:56.097163 [info ] [MainThread]: Running with dbt=1.10.11
+[0m05:25:56.097906 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'partial_parse': 'True', 'profiles_dir': '/usr/local/airflow/dags/dbt/fire_dbt', 'log_format': 'default', 'quiet': 'False', 'cache_selected_only': 'False', 'use_colors': 'True', 'write_json': 'True', 'debug': 'False', 'version_check': 'True', 'introspect': 'True', 'use_experimental_parser': 'False', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run', 'no_print': 'None', 'fail_fast': 'False', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'target_path': 'None', 'warn_error': 'None', 'log_path': '/usr/local/airflow/dags/dbt/fire_dbt/logs', 'empty': 'False', 'indirect_selection': 'eager'}
+[0m05:25:56.104050 [info ] [MainThread]: target not specified in profile 'fires_project', using 'default'
+[0m05:25:56.266747 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '78df600d-e2ad-4a40-9a8e-b6b909982412', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78176fb421b0>]}
+[0m05:25:56.320187 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '78df600d-e2ad-4a40-9a8e-b6b909982412', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78176f9cad50>]}
+[0m05:25:56.321372 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m05:25:56.404532 [debug] [MainThread]: checksum: 5335e1629744fab92fa7809c625edbb36f0d7063a879d6215c971798f27e66f9, vars: {}, profile: , target: , version: 1.10.11
+[0m05:25:56.499643 [debug] [MainThread]: Partial parsing enabled: 2 files deleted, 2 files added, 0 files changed.
+[0m05:25:56.500557 [debug] [MainThread]: Partial parsing: added file: fires_dbt://models/fires_raw.sql
+[0m05:25:56.501145 [debug] [MainThread]: Partial parsing: added file: fires_dbt://models/sources.yml
+[0m05:25:56.501524 [debug] [MainThread]: Partial parsing: deleted file: fires_dbt://models/model2.sql
+[0m05:25:56.501891 [debug] [MainThread]: Partial parsing: deleted file: fires_dbt://models/model1.sql
+[0m05:25:56.810602 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '78df600d-e2ad-4a40-9a8e-b6b909982412', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78176bffcd40>]}
+[0m05:25:56.869381 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/manifest.json
+[0m05:25:56.873465 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/semantic_manifest.json
+[0m05:25:56.907887 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '78df600d-e2ad-4a40-9a8e-b6b909982412', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78176ccdf8c0>]}
+[0m05:25:56.908528 [info ] [MainThread]: Found 1 model, 1 source, 434 macros
+[0m05:25:56.909070 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '78df600d-e2ad-4a40-9a8e-b6b909982412', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78176cfc50d0>]}
+[0m05:25:56.910880 [info ] [MainThread]: 
+[0m05:25:56.911548 [info ] [MainThread]: Concurrency: 1 threads (target='default')
+[0m05:25:56.912179 [info ] [MainThread]: 
+[0m05:25:56.912963 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m05:25:56.914259 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m05:25:56.962778 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m05:25:56.963546 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m05:25:56.964091 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m05:25:56.975411 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.011 seconds
+[0m05:25:56.976928 [debug] [ThreadPool]: On list_postgres: Close
+[0m05:25:56.978472 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_postgres, now list_postgres_public)
+[0m05:25:56.984700 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m05:25:56.985289 [debug] [ThreadPool]: On list_postgres_public: BEGIN
+[0m05:25:56.985796 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m05:25:56.995115 [debug] [ThreadPool]: SQL status: BEGIN in 0.009 seconds
+[0m05:25:56.995850 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m05:25:56.996401 [debug] [ThreadPool]: On list_postgres_public: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "list_postgres_public"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m05:25:57.000535 [debug] [ThreadPool]: SQL status: SELECT 46 in 0.004 seconds
+[0m05:25:57.002434 [debug] [ThreadPool]: On list_postgres_public: ROLLBACK
+[0m05:25:57.003865 [debug] [ThreadPool]: On list_postgres_public: Close
+[0m05:25:57.012887 [debug] [MainThread]: Using postgres connection "master"
+[0m05:25:57.013460 [debug] [MainThread]: On master: BEGIN
+[0m05:25:57.013896 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m05:25:57.023319 [debug] [MainThread]: SQL status: BEGIN in 0.009 seconds
+[0m05:25:57.023965 [debug] [MainThread]: Using postgres connection "master"
+[0m05:25:57.024461 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m05:25:57.029044 [debug] [MainThread]: SQL status: SELECT 0 in 0.004 seconds
+[0m05:25:57.030496 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '78df600d-e2ad-4a40-9a8e-b6b909982412', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78176b386f60>]}
+[0m05:25:57.031086 [debug] [MainThread]: On master: ROLLBACK
+[0m05:25:57.032446 [debug] [MainThread]: Using postgres connection "master"
+[0m05:25:57.032861 [debug] [MainThread]: On master: BEGIN
+[0m05:25:57.034768 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m05:25:57.035234 [debug] [MainThread]: On master: COMMIT
+[0m05:25:57.035630 [debug] [MainThread]: Using postgres connection "master"
+[0m05:25:57.036056 [debug] [MainThread]: On master: COMMIT
+[0m05:25:57.037346 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m05:25:57.037780 [debug] [MainThread]: On master: Close
+[0m05:25:57.040440 [debug] [Thread-1 (]: Began running node model.fires_dbt.fires_raw
+[0m05:25:57.041106 [info ] [Thread-1 (]: 1 of 1 START sql table model public.fires_raw .................................. [RUN]
+[0m05:25:57.041737 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_postgres_public, now model.fires_dbt.fires_raw)
+[0m05:25:57.042275 [debug] [Thread-1 (]: Began compiling node model.fires_dbt.fires_raw
+[0m05:25:57.048823 [debug] [Thread-1 (]: Writing injected SQL for node "model.fires_dbt.fires_raw"
+[0m05:25:57.057216 [debug] [Thread-1 (]: Began executing node model.fires_dbt.fires_raw
+[0m05:25:57.091775 [debug] [Thread-1 (]: Writing runtime sql for node "model.fires_dbt.fires_raw"
+[0m05:25:57.101847 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m05:25:57.102526 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: BEGIN
+[0m05:25:57.102973 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m05:25:57.112833 [debug] [Thread-1 (]: SQL status: BEGIN in 0.010 seconds
+[0m05:25:57.113608 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m05:25:57.114063 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+
+  
+    
+
+  create  table "postgres"."public"."fires_raw__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+select
+    cast(latitude as float) as latitude,
+    cast(longitude as float) as longitude,
+    cast(brightness as float) as brightness,
+    cast(scan as float) as scan,
+    cast(track as float) as track,
+    cast(acq_date as date) as acq_date,
+    cast(acq_time as varchar) as acq_time,
+    cast(satellite as varchar) as satellite,
+    cast(instrument as varchar) as instrument,
+    cast(confidence as int) as confidence,
+    cast(version as varchar) as version,
+    cast(bright_t31 as float) as bright_t31,
+    cast(frp as float) as frp,
+    cast(daynight as varchar) as daynight
+from "postgres"."public"."fires_raw"
+  );
+  
+[0m05:25:57.135020 [debug] [Thread-1 (]: SQL status: SELECT 13877 in 0.020 seconds
+[0m05:25:57.143907 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m05:25:57.144435 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+alter table "postgres"."public"."fires_raw" rename to "fires_raw__dbt_backup"
+[0m05:25:57.146144 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m05:25:57.149633 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m05:25:57.150094 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+alter table "postgres"."public"."fires_raw__dbt_tmp" rename to "fires_raw"
+[0m05:25:57.151598 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m05:25:57.165396 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: COMMIT
+[0m05:25:57.166029 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m05:25:57.166557 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: COMMIT
+[0m05:25:57.179651 [debug] [Thread-1 (]: SQL status: COMMIT in 0.012 seconds
+[0m05:25:57.185684 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public"."fires_raw__dbt_backup"
+[0m05:25:57.190972 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m05:25:57.191521 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+drop table if exists "postgres"."public"."fires_raw__dbt_backup" cascade
+[0m05:25:57.195951 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.004 seconds
+[0m05:25:57.198633 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: Close
+[0m05:25:57.200560 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '78df600d-e2ad-4a40-9a8e-b6b909982412', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78176cfe01d0>]}
+[0m05:25:57.201352 [info ] [Thread-1 (]: 1 of 1 OK created sql table model public.fires_raw ............................. [[32mSELECT 13877[0m in 0.16s]
+[0m05:25:57.202115 [debug] [Thread-1 (]: Finished running node model.fires_dbt.fires_raw
+[0m05:25:57.203830 [debug] [MainThread]: Using postgres connection "master"
+[0m05:25:57.204306 [debug] [MainThread]: On master: BEGIN
+[0m05:25:57.204709 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m05:25:57.214256 [debug] [MainThread]: SQL status: BEGIN in 0.009 seconds
+[0m05:25:57.214984 [debug] [MainThread]: On master: COMMIT
+[0m05:25:57.215474 [debug] [MainThread]: Using postgres connection "master"
+[0m05:25:57.215888 [debug] [MainThread]: On master: COMMIT
+[0m05:25:57.217100 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m05:25:57.217519 [debug] [MainThread]: On master: Close
+[0m05:25:57.218067 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m05:25:57.218491 [debug] [MainThread]: Connection 'model.fires_dbt.fires_raw' was properly closed.
+[0m05:25:57.218935 [info ] [MainThread]: 
+[0m05:25:57.219455 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.31 seconds (0.31s).
+[0m05:25:57.220360 [debug] [MainThread]: Command end result
+[0m05:25:57.244044 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/manifest.json
+[0m05:25:57.248762 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/semantic_manifest.json
+[0m05:25:57.257357 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/local/airflow/dags/dbt/fire_dbt/target/run_results.json
+[0m05:25:57.257938 [info ] [MainThread]: 
+[0m05:25:57.258545 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m05:25:57.259078 [info ] [MainThread]: 
+[0m05:25:57.259584 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m05:25:57.260788 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.2679242, "process_in_blocks": "264", "process_kernel_time": 0.460989, "process_mem_max_rss": "130400", "process_out_blocks": "0", "process_user_time": 2.666588}
+[0m05:25:57.261368 [debug] [MainThread]: Command `dbt run` succeeded at 05:25:57.261266 after 1.27 seconds
+[0m05:25:57.261893 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78176d6577a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78176ce6baa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78176e0d8530>]}
+[0m05:25:57.262494 [debug] [MainThread]: Flushing usage events
+[0m05:25:58.778985 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m05:29:09.121002 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d3f2c675c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d3f5401970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d3f21e4bf0>]}
+
+
+============================== 05:29:09.166617 | b1395102-37b2-4014-9143-7fd63a9e17df ==============================
+[0m05:29:09.166617 [info ] [MainThread]: Running with dbt=1.10.11
+[0m05:29:09.167493 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'partial_parse': 'True', 'introspect': 'True', 'log_format': 'default', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'quiet': 'False', 'invocation_command': 'dbt run', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'profiles_dir': '/usr/local/airflow/dags/dbt/fire_dbt', 'debug': 'False', 'version_check': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'no_print': 'None', 'static_parser': 'True', 'write_json': 'True', 'fail_fast': 'False', 'printer_width': '80', 'empty': 'False', 'target_path': 'None', 'log_path': '/usr/local/airflow/dags/dbt/fire_dbt/logs'}
+[0m05:29:09.173344 [info ] [MainThread]: target not specified in profile 'fires_project', using 'default'
+[0m05:29:09.437778 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b1395102-37b2-4014-9143-7fd63a9e17df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d3f1770410>]}
+[0m05:29:09.490725 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b1395102-37b2-4014-9143-7fd63a9e17df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d3f22e6780>]}
+[0m05:29:09.492222 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m05:29:09.579433 [debug] [MainThread]: checksum: 5335e1629744fab92fa7809c625edbb36f0d7063a879d6215c971798f27e66f9, vars: {}, profile: , target: , version: 1.10.11
+[0m05:29:09.719824 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m05:29:09.720448 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m05:29:09.746533 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b1395102-37b2-4014-9143-7fd63a9e17df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d3f16a10d0>]}
+[0m05:29:09.811050 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/manifest.json
+[0m05:29:09.815988 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/semantic_manifest.json
+[0m05:29:09.861428 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b1395102-37b2-4014-9143-7fd63a9e17df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d3f15f54c0>]}
+[0m05:29:09.862078 [info ] [MainThread]: Found 1 model, 1 source, 434 macros
+[0m05:29:09.862637 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b1395102-37b2-4014-9143-7fd63a9e17df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d3f15f6240>]}
+[0m05:29:09.864496 [info ] [MainThread]: 
+[0m05:29:09.865189 [info ] [MainThread]: Concurrency: 1 threads (target='default')
+[0m05:29:09.865676 [info ] [MainThread]: 
+[0m05:29:09.866412 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m05:29:09.867613 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m05:29:09.922680 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m05:29:09.923266 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m05:29:09.923808 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m05:29:09.936054 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.012 seconds
+[0m05:29:09.937572 [debug] [ThreadPool]: On list_postgres: Close
+[0m05:29:09.938958 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_postgres, now list_postgres_public)
+[0m05:29:09.944006 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m05:29:09.944437 [debug] [ThreadPool]: On list_postgres_public: BEGIN
+[0m05:29:09.944858 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m05:29:09.954564 [debug] [ThreadPool]: SQL status: BEGIN in 0.010 seconds
+[0m05:29:09.955138 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m05:29:09.955693 [debug] [ThreadPool]: On list_postgres_public: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "list_postgres_public"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m05:29:09.960851 [debug] [ThreadPool]: SQL status: SELECT 46 in 0.005 seconds
+[0m05:29:09.962739 [debug] [ThreadPool]: On list_postgres_public: ROLLBACK
+[0m05:29:09.964137 [debug] [ThreadPool]: On list_postgres_public: Close
+[0m05:29:09.973047 [debug] [MainThread]: Using postgres connection "master"
+[0m05:29:09.973544 [debug] [MainThread]: On master: BEGIN
+[0m05:29:09.973900 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m05:29:09.983581 [debug] [MainThread]: SQL status: BEGIN in 0.010 seconds
+[0m05:29:09.984199 [debug] [MainThread]: Using postgres connection "master"
+[0m05:29:09.984672 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m05:29:09.989861 [debug] [MainThread]: SQL status: SELECT 0 in 0.005 seconds
+[0m05:29:09.991123 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b1395102-37b2-4014-9143-7fd63a9e17df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d3f15f5820>]}
+[0m05:29:09.991688 [debug] [MainThread]: On master: ROLLBACK
+[0m05:29:09.992879 [debug] [MainThread]: Using postgres connection "master"
+[0m05:29:09.993266 [debug] [MainThread]: On master: BEGIN
+[0m05:29:09.995104 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m05:29:09.995595 [debug] [MainThread]: On master: COMMIT
+[0m05:29:09.995982 [debug] [MainThread]: Using postgres connection "master"
+[0m05:29:09.996444 [debug] [MainThread]: On master: COMMIT
+[0m05:29:09.998182 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m05:29:09.998858 [debug] [MainThread]: On master: Close
+[0m05:29:10.002741 [debug] [Thread-1 (]: Began running node model.fires_dbt.fires_raw
+[0m05:29:10.003477 [info ] [Thread-1 (]: 1 of 1 START sql table model public.fires_raw .................................. [RUN]
+[0m05:29:10.004029 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_postgres_public, now model.fires_dbt.fires_raw)
+[0m05:29:10.004459 [debug] [Thread-1 (]: Began compiling node model.fires_dbt.fires_raw
+[0m05:29:10.010468 [debug] [Thread-1 (]: Writing injected SQL for node "model.fires_dbt.fires_raw"
+[0m05:29:10.016382 [debug] [Thread-1 (]: Began executing node model.fires_dbt.fires_raw
+[0m05:29:10.052905 [debug] [Thread-1 (]: Writing runtime sql for node "model.fires_dbt.fires_raw"
+[0m05:29:10.057690 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m05:29:10.058216 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: BEGIN
+[0m05:29:10.058625 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m05:29:10.068671 [debug] [Thread-1 (]: SQL status: BEGIN in 0.010 seconds
+[0m05:29:10.069336 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m05:29:10.069837 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+
+  
+    
+
+  create  table "postgres"."public"."fires_raw__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+select
+    cast(latitude as float) as latitude,
+    cast(longitude as float) as longitude,
+    cast(brightness as float) as brightness,
+    cast(scan as float) as scan,
+    cast(track as float) as track,
+    cast(acq_date as date) as acq_date,
+    cast(acq_time as varchar) as acq_time,
+    cast(satellite as varchar) as satellite,
+    cast(instrument as varchar) as instrument,
+    cast(confidence as int) as confidence,
+    cast(version as varchar) as version,
+    cast(bright_t31 as float) as bright_t31,
+    cast(frp as float) as frp,
+    cast(daynight as varchar) as daynight
+from "postgres"."public"."fires_raw"
+  );
+  
+[0m05:29:10.094452 [debug] [Thread-1 (]: SQL status: SELECT 13877 in 0.024 seconds
+[0m05:29:10.103859 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m05:29:10.104484 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+alter table "postgres"."public"."fires_raw" rename to "fires_raw__dbt_backup"
+[0m05:29:10.106742 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m05:29:10.109846 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m05:29:10.110325 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+alter table "postgres"."public"."fires_raw__dbt_tmp" rename to "fires_raw"
+[0m05:29:10.111949 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m05:29:10.126479 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: COMMIT
+[0m05:29:10.127162 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m05:29:10.127729 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: COMMIT
+[0m05:29:10.138451 [debug] [Thread-1 (]: SQL status: COMMIT in 0.010 seconds
+[0m05:29:10.144331 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public"."fires_raw__dbt_backup"
+[0m05:29:10.149334 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m05:29:10.149944 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+drop table if exists "postgres"."public"."fires_raw__dbt_backup" cascade
+[0m05:29:10.154441 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.004 seconds
+[0m05:29:10.156881 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: Close
+[0m05:29:10.158743 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b1395102-37b2-4014-9143-7fd63a9e17df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d3f429f710>]}
+[0m05:29:10.159540 [info ] [Thread-1 (]: 1 of 1 OK created sql table model public.fires_raw ............................. [[32mSELECT 13877[0m in 0.15s]
+[0m05:29:10.160387 [debug] [Thread-1 (]: Finished running node model.fires_dbt.fires_raw
+[0m05:29:10.162019 [debug] [MainThread]: Using postgres connection "master"
+[0m05:29:10.162449 [debug] [MainThread]: On master: BEGIN
+[0m05:29:10.162841 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m05:29:10.172658 [debug] [MainThread]: SQL status: BEGIN in 0.010 seconds
+[0m05:29:10.173339 [debug] [MainThread]: On master: COMMIT
+[0m05:29:10.173773 [debug] [MainThread]: Using postgres connection "master"
+[0m05:29:10.174167 [debug] [MainThread]: On master: COMMIT
+[0m05:29:10.175379 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m05:29:10.175806 [debug] [MainThread]: On master: Close
+[0m05:29:10.176377 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m05:29:10.176792 [debug] [MainThread]: Connection 'model.fires_dbt.fires_raw' was properly closed.
+[0m05:29:10.177218 [info ] [MainThread]: 
+[0m05:29:10.177751 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.31 seconds (0.31s).
+[0m05:29:10.178489 [debug] [MainThread]: Command end result
+[0m05:29:10.200758 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/manifest.json
+[0m05:29:10.204770 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/semantic_manifest.json
+[0m05:29:10.212218 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/local/airflow/dags/dbt/fire_dbt/target/run_results.json
+[0m05:29:10.212727 [info ] [MainThread]: 
+[0m05:29:10.213356 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m05:29:10.213840 [info ] [MainThread]: 
+[0m05:29:10.214347 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m05:29:10.215915 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.156132, "process_in_blocks": "64976", "process_kernel_time": 0.514134, "process_mem_max_rss": "124652", "process_out_blocks": "0", "process_user_time": 2.535078}
+[0m05:29:10.216500 [debug] [MainThread]: Command `dbt run` succeeded at 05:29:10.216408 after 1.16 seconds
+[0m05:29:10.216966 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d3f2405130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d3f294c620>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d3f14ab6e0>]}
+[0m05:29:10.217438 [debug] [MainThread]: Flushing usage events
+[0m05:29:11.430517 [debug] [MainThread]: An error was encountered while trying to flush usage events
