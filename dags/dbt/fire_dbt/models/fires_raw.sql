@@ -1,11 +1,11 @@
-{{ config(materialized='table', schema='bronze') }}
+{{ config(materialized='table', schema='public') }}
 
 {{
     config(
         materialized='table',
-        schema='bronze',
+        schema='public',
         post_hook=[
-            "INSERT INTO bronze.fires_bronze (
+            "INSERT INTO fires_bronze (
                 latitude, longitude, brightness, scan, track,
                 acq_date, acq_time, satellite, instrument, confidence,
                 version, bright_t31, frp, daynight, ingested_at,

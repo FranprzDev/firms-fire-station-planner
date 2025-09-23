@@ -79,18 +79,15 @@ def validate_and_clean(**context) -> str:
     logger.info(f"Datos válidos listos: {len(df_valid)} registros")
     return valid_path
 
-def create_bronze_schema() -> None:
+def create_table_in_public() -> None:
     conn = BaseHook.get_connection('postgres_default')
     engine = create_engine(f'postgresql://{conn.login}:{conn.password}@{conn.host}:{conn.port}/{conn.schema}')
 
     with engine.connect() as connection:
         try:
-            with connection.begin():  # Iniciar transacción explícita
-                connection.execute(text("CREATE SCHEMA IF NOT EXISTS bronze"))
-                logger.info("Esquema 'bronze' creado/verificado")
-
+            with connection.begin():
                 create_table_sql = text("""
-                    CREATE TABLE IF NOT EXISTS bronze.fires_bronze (
+                    CREATE TABLE IF NOT EXISTS fires_bronze (
                         latitude FLOAT,
                         longitude FLOAT,
                         brightness FLOAT,
@@ -111,24 +108,14 @@ def create_bronze_schema() -> None:
                         processing_date DATE DEFAULT CURRENT_DATE,
                         data_quality_score INTEGER,
                         PRIMARY KEY (acq_date, latitude, longitude, acq_time)
-                    ) PARTITION BY RANGE (acq_date)
+                    )
                 """)
 
                 connection.execute(create_table_sql)
-                logger.info("Tabla bronze.fires_bronze creada/verificada")
-
-                for month in ['2025-07-01', '2025-08-01']:
-                    partition_sql = text(f"""
-                        CREATE TABLE IF NOT EXISTS bronze.fires_bronze_{month.replace('-', '_')}
-                        PARTITION OF bronze.fires_bronze
-                        FOR VALUES FROM ('{month}') TO ('{month.replace('07', '08') if month == '2025-07-01' else '2025-09-01'}')
-                    """)
-                    connection.execute(partition_sql)
-
-                logger.info("Particiones creadas para julio 2025")
+                logger.info("Tabla 'fires_bronze' creada/verificada en esquema public")
 
         except Exception as e:
-            logger.error(f"Error creando esquema Bronze: {e}")
+            logger.error(f"Error creando tabla: {e}")
             raise
 
 def load_bronze_data(**context) -> None:
@@ -139,7 +126,7 @@ def load_bronze_data(**context) -> None:
     engine = create_engine(f'postgresql://{conn.login}:{conn.password}@{conn.host}:{conn.port}/{conn.schema}')
 
     try:
-        df.to_sql('fires_bronze', engine, schema='bronze', if_exists='append', index=False, method='multi')
+        df.to_sql('fires_bronze', engine, if_exists='replace', index=False, method='multi')
         logger.info(f"Datos Bronze cargados exitosamente: {len(df)} registros")
 
         os.remove(valid_path)
@@ -180,13 +167,13 @@ with DAG(
         python_callable=validate_and_clean,
     )
 
-    create_schema_task = PythonOperator(
-        task_id='create_bronze_schema',
-        python_callable=create_bronze_schema,
+    create_table_task = PythonOperator(
+        task_id='create_table_in_public',
+        python_callable=create_table_in_public,
     )
 
     load_bronze_task = PythonOperator(
-        task_id='load_bronze_layer',
+        task_id='load_bronze_data',
         python_callable=load_bronze_data,
     )
 
@@ -200,6 +187,6 @@ with DAG(
         bash_command='cd /usr/local/airflow/dags/dbt/fire_dbt && dbt run',
     )
 
-    extract_task >> validate_task >> create_schema_task >> load_bronze_task >> dbt_task
+    extract_task >> validate_task >> create_table_task >> load_bronze_task >> dbt_task
 
     extract_task >> load_raw_task
