@@ -1,1 +1,1 @@
-{"_invocation_id": "b1395102-37b2-4014-9143-7fd63a9e17df", "linked": {"0": {"name": "source.fires_dbt.raw.fires_raw", "type": "source", "succ": [1]}, "1": {"name": "model.fires_dbt.fires_raw", "type": "model"}}}
+{"_invocation_id": "8a69ccf1-7b85-4f7f-989f-45fdf085205d", "linked": {"0": {"name": "source.fires_dbt.raw.fires_raw", "type": "source", "succ": [2]}, "1": {"name": "source.fires_dbt.raw.fires_bronze", "type": "source"}, "2": {"name": "model.fires_dbt.fires_raw", "type": "model"}}}

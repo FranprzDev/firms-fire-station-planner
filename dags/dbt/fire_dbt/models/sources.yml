@@ -7,3 +7,5 @@ sources:
     tables:
       - name: fires_raw
         description: Raw fires data from MODIS CSV
+      - name: fires_bronze
+        description: Bronze layer - validated and cleaned fires data
