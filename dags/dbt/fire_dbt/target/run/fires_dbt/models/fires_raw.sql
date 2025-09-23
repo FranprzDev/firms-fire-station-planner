@@ -20,7 +20,7 @@ SELECT
     CAST(scan as FLOAT) as scan,
     CAST(track as FLOAT) as track,
     CAST(acq_date as DATE) as acq_date,
-    CAST(acq_time as VARCHAR(10)) as acq_time,
+    acq_time,
     CAST(satellite as VARCHAR(10)) as satellite,
     CAST(instrument as VARCHAR(10)) as instrument,
     CAST(confidence as INTEGER) as confidence,

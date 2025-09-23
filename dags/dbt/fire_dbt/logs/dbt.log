@@ -2968,3 +2968,2291 @@ HINT:  You will need to rewrite or cast the expression.
 [0m19:42:46.473332 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79db71f185c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79db71b68ec0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79db71b6b200>]}
 [0m19:42:46.473799 [debug] [MainThread]: Flushing usage events
 [0m19:42:47.312593 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:44:13.231666 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x754648703620>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7546480e0230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7546483f0920>]}
+
+
+============================== 19:44:13.275787 | e923b039-74f2-4801-8845-aae84acb1bcf ==============================
+[0m19:44:13.275787 [info ] [MainThread]: Running with dbt=1.10.11
+[0m19:44:13.276434 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt run', 'indirect_selection': 'eager', 'warn_error': 'None', 'quiet': 'False', 'empty': 'False', 'fail_fast': 'False', 'debug': 'False', 'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False', 'version_check': 'True', 'target_path': 'None', 'write_json': 'True', 'cache_selected_only': 'False', 'use_colors': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'introspect': 'True', 'printer_width': '80', 'log_format': 'default', 'no_print': 'None', 'static_parser': 'True', 'log_path': '/usr/local/airflow/dags/dbt/fire_dbt/logs', 'use_experimental_parser': 'False', 'profiles_dir': '/usr/local/airflow/dags/dbt/fire_dbt'}
+[0m19:44:13.283559 [info ] [MainThread]: target not specified in profile 'fires_project', using 'default'
+[0m19:44:13.463935 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e923b039-74f2-4801-8845-aae84acb1bcf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7546472d3320>]}
+[0m19:44:13.523509 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e923b039-74f2-4801-8845-aae84acb1bcf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x754647312e10>]}
+[0m19:44:13.524672 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m19:44:13.614730 [debug] [MainThread]: checksum: 5335e1629744fab92fa7809c625edbb36f0d7063a879d6215c971798f27e66f9, vars: {}, profile: , target: , version: 1.10.11
+[0m19:44:13.727515 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:44:13.728050 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:44:13.755926 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e923b039-74f2-4801-8845-aae84acb1bcf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x754647155a60>]}
+[0m19:44:13.818125 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/manifest.json
+[0m19:44:13.822802 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/semantic_manifest.json
+[0m19:44:13.855193 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e923b039-74f2-4801-8845-aae84acb1bcf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x754646fe75f0>]}
+[0m19:44:13.855933 [info ] [MainThread]: Found 1 model, 2 sources, 434 macros
+[0m19:44:13.856488 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e923b039-74f2-4801-8845-aae84acb1bcf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75464677b800>]}
+[0m19:44:13.858122 [info ] [MainThread]: 
+[0m19:44:13.858596 [info ] [MainThread]: Concurrency: 1 threads (target='default')
+[0m19:44:13.859011 [info ] [MainThread]: 
+[0m19:44:13.859619 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m19:44:13.860681 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m19:44:13.906797 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m19:44:13.907424 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m19:44:13.907846 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:44:13.918292 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.010 seconds
+[0m19:44:13.919923 [debug] [ThreadPool]: On list_postgres: Close
+[0m19:44:13.921423 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_postgres, now list_postgres_public_public)
+[0m19:44:13.926473 [debug] [ThreadPool]: Using postgres connection "list_postgres_public_public"
+[0m19:44:13.926922 [debug] [ThreadPool]: On list_postgres_public_public: BEGIN
+[0m19:44:13.927316 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:44:13.936223 [debug] [ThreadPool]: SQL status: BEGIN in 0.009 seconds
+[0m19:44:13.936808 [debug] [ThreadPool]: Using postgres connection "list_postgres_public_public"
+[0m19:44:13.937235 [debug] [ThreadPool]: On list_postgres_public_public: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "list_postgres_public_public"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_public'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_public'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_public'
+  
+[0m19:44:13.940792 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.003 seconds
+[0m19:44:13.942233 [debug] [ThreadPool]: On list_postgres_public_public: ROLLBACK
+[0m19:44:13.943418 [debug] [ThreadPool]: On list_postgres_public_public: Close
+[0m19:44:13.947262 [debug] [MainThread]: Using postgres connection "master"
+[0m19:44:13.947721 [debug] [MainThread]: On master: BEGIN
+[0m19:44:13.948111 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:44:13.956941 [debug] [MainThread]: SQL status: BEGIN in 0.009 seconds
+[0m19:44:13.957558 [debug] [MainThread]: Using postgres connection "master"
+[0m19:44:13.958067 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m19:44:13.962157 [debug] [MainThread]: SQL status: SELECT 0 in 0.004 seconds
+[0m19:44:13.963461 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e923b039-74f2-4801-8845-aae84acb1bcf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x754645701ac0>]}
+[0m19:44:13.964004 [debug] [MainThread]: On master: ROLLBACK
+[0m19:44:13.965330 [debug] [MainThread]: Using postgres connection "master"
+[0m19:44:13.965769 [debug] [MainThread]: On master: BEGIN
+[0m19:44:13.967733 [debug] [MainThread]: SQL status: BEGIN in 0.002 seconds
+[0m19:44:13.968216 [debug] [MainThread]: On master: COMMIT
+[0m19:44:13.968707 [debug] [MainThread]: Using postgres connection "master"
+[0m19:44:13.969115 [debug] [MainThread]: On master: COMMIT
+[0m19:44:13.970329 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m19:44:13.970741 [debug] [MainThread]: On master: Close
+[0m19:44:13.973268 [debug] [Thread-1 (]: Began running node model.fires_dbt.fires_raw
+[0m19:44:13.973970 [info ] [Thread-1 (]: 1 of 1 START sql table model public_public.fires_raw ........................... [RUN]
+[0m19:44:13.974548 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_postgres_public_public, now model.fires_dbt.fires_raw)
+[0m19:44:13.974992 [debug] [Thread-1 (]: Began compiling node model.fires_dbt.fires_raw
+[0m19:44:13.982020 [debug] [Thread-1 (]: Writing injected SQL for node "model.fires_dbt.fires_raw"
+[0m19:44:13.987275 [debug] [Thread-1 (]: Began executing node model.fires_dbt.fires_raw
+[0m19:44:14.021128 [debug] [Thread-1 (]: Writing runtime sql for node "model.fires_dbt.fires_raw"
+[0m19:44:14.026451 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m19:44:14.026992 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: BEGIN
+[0m19:44:14.027397 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:44:14.036758 [debug] [Thread-1 (]: SQL status: BEGIN in 0.009 seconds
+[0m19:44:14.037403 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m19:44:14.037919 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+
+  
+    
+
+  create  table "postgres"."public_public"."fires_raw__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+
+
+-- Modelo Bronze: datos MODIS validados y con metadata
+SELECT
+    CAST(latitude as FLOAT) as latitude,
+    CAST(longitude as FLOAT) as longitude,
+    CAST(brightness as FLOAT) as brightness,
+    CAST(scan as FLOAT) as scan,
+    CAST(track as FLOAT) as track,
+    CAST(acq_date as DATE) as acq_date,
+    CAST(acq_time as VARCHAR(10)) as acq_time,
+    CAST(satellite as VARCHAR(10)) as satellite,
+    CAST(instrument as VARCHAR(10)) as instrument,
+    CAST(confidence as INTEGER) as confidence,
+    CAST(version as VARCHAR(10)) as version,
+    CAST(bright_t31 as FLOAT) as bright_t31,
+    CAST(frp as FLOAT) as frp,
+    CAST(daynight as VARCHAR(5)) as daynight,
+
+    -- Metadata Bronze
+    CURRENT_TIMESTAMP as ingested_at,
+    'valid' as validation_status,
+    'modis-fire-two-months.csv' as source_file,
+    CURRENT_DATE as processing_date,
+
+    -- Data Quality Score basado en confidence
+    CASE
+        WHEN CAST(confidence as INTEGER) >= 80 THEN 100
+        WHEN CAST(confidence as INTEGER) >= 50 THEN 75
+        ELSE 50
+    END as data_quality_score
+
+FROM "postgres"."public"."fires_raw"
+
+-- Validaciones Bronze aplicadas en WHERE
+WHERE CAST(frp as FLOAT) > 0
+    AND CAST(confidence as INTEGER) > 30
+    AND CAST(latitude as FLOAT) IS NOT NULL
+    AND CAST(longitude as FLOAT) IS NOT NULL
+    AND CAST(latitude as FLOAT) BETWEEN -55 AND -21
+    AND CAST(longitude as FLOAT) BETWEEN -73 AND -53
+    AND CAST(acq_date as DATE) IS NOT NULL
+  );
+  
+[0m19:44:14.066265 [debug] [Thread-1 (]: SQL status: SELECT 13143 in 0.028 seconds
+[0m19:44:14.074912 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m19:44:14.075425 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+alter table "postgres"."public_public"."fires_raw__dbt_tmp" rename to "fires_raw"
+[0m19:44:14.077127 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m19:44:14.079010 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m19:44:14.079504 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+
+        INSERT INTO fires_bronze (
+                latitude, longitude, brightness, scan, track,
+                acq_date, acq_time, satellite, instrument, confidence,
+                version, bright_t31, frp, daynight, ingested_at,
+                validation_status, source_file, processing_date, data_quality_score
+            )
+            SELECT
+                CAST(latitude as FLOAT),
+                CAST(longitude as FLOAT),
+                CAST(brightness as FLOAT),
+                CAST(scan as FLOAT),
+                CAST(track as FLOAT),
+                CAST(acq_date as DATE),
+                CAST(acq_time as VARCHAR(10)),
+                CAST(satellite as VARCHAR(10)),
+                CAST(instrument as VARCHAR(10)),
+                CAST(confidence as INTEGER),
+                CAST(version as VARCHAR(10)),
+                CAST(bright_t31 as FLOAT),
+                CAST(frp as FLOAT),
+                CAST(daynight as VARCHAR(5)),
+                CURRENT_TIMESTAMP,
+                'valid',
+                'modis-fire-two-months.csv',
+                CURRENT_DATE,
+                CASE
+                    WHEN CAST(confidence as INTEGER) >= 80 THEN 100
+                    WHEN CAST(confidence as INTEGER) >= 50 THEN 75
+                    ELSE 50
+                END
+            FROM "postgres"."public"."fires_raw"
+            WHERE CAST(frp as FLOAT) > 0
+                AND CAST(confidence as INTEGER) > 30
+                AND CAST(latitude as FLOAT) IS NOT NULL
+                AND CAST(longitude as FLOAT) IS NOT NULL
+                AND CAST(latitude as FLOAT) BETWEEN -55 AND -21
+                AND CAST(longitude as FLOAT) BETWEEN -73 AND -53
+                AND CAST(acq_date as DATE) IS NOT NULL
+      
+[0m19:44:14.082659 [debug] [Thread-1 (]: Postgres adapter: Postgres error: column "acq_time" is of type bigint but expression is of type character varying
+LINE 16:                 CAST(acq_time as VARCHAR(10)),
+                         ^
+HINT:  You will need to rewrite or cast the expression.
+
+[0m19:44:14.083297 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: ROLLBACK
+[0m19:44:14.084607 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: Close
+[0m19:44:14.088701 [debug] [Thread-1 (]: Database Error in model fires_raw (models/fires_raw.sql)
+  column "acq_time" is of type bigint but expression is of type character varying
+  LINE 16:                 CAST(acq_time as VARCHAR(10)),
+                           ^
+  HINT:  You will need to rewrite or cast the expression.
+  compiled code at target/run/fires_dbt/models/fires_raw.sql
+[0m19:44:14.090505 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e923b039-74f2-4801-8845-aae84acb1bcf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x754645713a70>]}
+[0m19:44:14.091298 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model public_public.fires_raw .................. [[31mERROR[0m in 0.11s]
+[0m19:44:14.092045 [debug] [Thread-1 (]: Finished running node model.fires_dbt.fires_raw
+[0m19:44:14.092771 [debug] [Thread-4 (]: Marking all children of 'model.fires_dbt.fires_raw' to be skipped because of status 'error'.  Reason: Database Error in model fires_raw (models/fires_raw.sql)
+  column "acq_time" is of type bigint but expression is of type character varying
+  LINE 16:                 CAST(acq_time as VARCHAR(10)),
+                           ^
+  HINT:  You will need to rewrite or cast the expression.
+  compiled code at target/run/fires_dbt/models/fires_raw.sql.
+[0m19:44:14.094605 [debug] [MainThread]: Using postgres connection "master"
+[0m19:44:14.095037 [debug] [MainThread]: On master: BEGIN
+[0m19:44:14.095428 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m19:44:14.104638 [debug] [MainThread]: SQL status: BEGIN in 0.009 seconds
+[0m19:44:14.105284 [debug] [MainThread]: On master: COMMIT
+[0m19:44:14.105764 [debug] [MainThread]: Using postgres connection "master"
+[0m19:44:14.106163 [debug] [MainThread]: On master: COMMIT
+[0m19:44:14.107409 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m19:44:14.107858 [debug] [MainThread]: On master: Close
+[0m19:44:14.108477 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:44:14.108881 [debug] [MainThread]: Connection 'model.fires_dbt.fires_raw' was properly closed.
+[0m19:44:14.109287 [info ] [MainThread]: 
+[0m19:44:14.109762 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.25 seconds (0.25s).
+[0m19:44:14.110586 [debug] [MainThread]: Command end result
+[0m19:44:14.134359 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/manifest.json
+[0m19:44:14.140173 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/semantic_manifest.json
+[0m19:44:14.151112 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/local/airflow/dags/dbt/fire_dbt/target/run_results.json
+[0m19:44:14.151791 [info ] [MainThread]: 
+[0m19:44:14.152727 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m19:44:14.153476 [info ] [MainThread]: 
+[0m19:44:14.154215 [error] [MainThread]: [31mFailure in model fires_raw (models/fires_raw.sql)[0m
+[0m19:44:14.154945 [error] [MainThread]:   Database Error in model fires_raw (models/fires_raw.sql)
+  column "acq_time" is of type bigint but expression is of type character varying
+  LINE 16:                 CAST(acq_time as VARCHAR(10)),
+                           ^
+  HINT:  You will need to rewrite or cast the expression.
+  compiled code at target/run/fires_dbt/models/fires_raw.sql
+[0m19:44:14.155463 [info ] [MainThread]: 
+[0m19:44:14.156065 [info ] [MainThread]:   compiled code at target/compiled/fires_dbt/models/fires_raw.sql
+[0m19:44:14.156539 [info ] [MainThread]: 
+[0m19:44:14.157032 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m19:44:14.158252 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.9836856, "process_in_blocks": "0", "process_kernel_time": 0.469254, "process_mem_max_rss": "125496", "process_out_blocks": "0", "process_user_time": 2.414455}
+[0m19:44:14.158822 [debug] [MainThread]: Command `dbt run` failed at 19:44:14.158716 after 0.98 seconds
+[0m19:44:14.159361 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x754647d3dc70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7546483e4770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7546457172f0>]}
+[0m19:44:14.159901 [debug] [MainThread]: Flushing usage events
+[0m19:44:15.010336 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:46:00.447509 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x771f8ee61940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x771f8ecfc320>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x771f8ecfcce0>]}
+
+
+============================== 19:46:00.490362 | e6e6a48f-4ec7-4106-a918-2eba14c9a009 ==============================
+[0m19:46:00.490362 [info ] [MainThread]: Running with dbt=1.10.11
+[0m19:46:00.491155 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'use_colors': 'True', 'log_path': '/usr/local/airflow/dags/dbt/fire_dbt/logs', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'log_format': 'default', 'warn_error': 'None', 'empty': 'False', 'invocation_command': 'dbt run', 'introspect': 'True', 'no_print': 'None', 'version_check': 'True', 'write_json': 'True', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'profiles_dir': '/usr/local/airflow/dags/dbt/fire_dbt', 'printer_width': '80', 'cache_selected_only': 'False', 'indirect_selection': 'eager', 'debug': 'False'}
+[0m19:46:00.496901 [info ] [MainThread]: target not specified in profile 'fires_project', using 'default'
+[0m19:46:00.650282 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e6e6a48f-4ec7-4106-a918-2eba14c9a009', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x771f8da62540>]}
+[0m19:46:00.702902 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e6e6a48f-4ec7-4106-a918-2eba14c9a009', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x771f8db340e0>]}
+[0m19:46:00.703876 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m19:46:00.783578 [debug] [MainThread]: checksum: 5335e1629744fab92fa7809c625edbb36f0d7063a879d6215c971798f27e66f9, vars: {}, profile: , target: , version: 1.10.11
+[0m19:46:00.887684 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:46:00.888395 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:46:00.915584 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e6e6a48f-4ec7-4106-a918-2eba14c9a009', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x771f8da634d0>]}
+[0m19:46:00.977318 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/manifest.json
+[0m19:46:00.981624 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/semantic_manifest.json
+[0m19:46:01.013893 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e6e6a48f-4ec7-4106-a918-2eba14c9a009', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x771f8d86aae0>]}
+[0m19:46:01.014581 [info ] [MainThread]: Found 1 model, 2 sources, 434 macros
+[0m19:46:01.015064 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e6e6a48f-4ec7-4106-a918-2eba14c9a009', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x771f8dc33200>]}
+[0m19:46:01.016640 [info ] [MainThread]: 
+[0m19:46:01.017133 [info ] [MainThread]: Concurrency: 1 threads (target='default')
+[0m19:46:01.017637 [info ] [MainThread]: 
+[0m19:46:01.018298 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m19:46:01.019371 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m19:46:01.066620 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m19:46:01.067236 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m19:46:01.067733 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:46:01.078887 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.011 seconds
+[0m19:46:01.080497 [debug] [ThreadPool]: On list_postgres: Close
+[0m19:46:01.081967 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_postgres, now list_postgres_public_public)
+[0m19:46:01.087091 [debug] [ThreadPool]: Using postgres connection "list_postgres_public_public"
+[0m19:46:01.087580 [debug] [ThreadPool]: On list_postgres_public_public: BEGIN
+[0m19:46:01.088038 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:46:01.098027 [debug] [ThreadPool]: SQL status: BEGIN in 0.010 seconds
+[0m19:46:01.098715 [debug] [ThreadPool]: Using postgres connection "list_postgres_public_public"
+[0m19:46:01.099175 [debug] [ThreadPool]: On list_postgres_public_public: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "list_postgres_public_public"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_public'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_public'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_public'
+  
+[0m19:46:01.103602 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.004 seconds
+[0m19:46:01.104940 [debug] [ThreadPool]: On list_postgres_public_public: ROLLBACK
+[0m19:46:01.106556 [debug] [ThreadPool]: On list_postgres_public_public: Close
+[0m19:46:01.111152 [debug] [MainThread]: Using postgres connection "master"
+[0m19:46:01.111819 [debug] [MainThread]: On master: BEGIN
+[0m19:46:01.112346 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:46:01.122606 [debug] [MainThread]: SQL status: BEGIN in 0.010 seconds
+[0m19:46:01.123226 [debug] [MainThread]: Using postgres connection "master"
+[0m19:46:01.123712 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m19:46:01.128164 [debug] [MainThread]: SQL status: SELECT 0 in 0.004 seconds
+[0m19:46:01.129520 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e6e6a48f-4ec7-4106-a918-2eba14c9a009', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x771f8bf7bc80>]}
+[0m19:46:01.130157 [debug] [MainThread]: On master: ROLLBACK
+[0m19:46:01.131427 [debug] [MainThread]: Using postgres connection "master"
+[0m19:46:01.131890 [debug] [MainThread]: On master: BEGIN
+[0m19:46:01.133975 [debug] [MainThread]: SQL status: BEGIN in 0.002 seconds
+[0m19:46:01.134433 [debug] [MainThread]: On master: COMMIT
+[0m19:46:01.134850 [debug] [MainThread]: Using postgres connection "master"
+[0m19:46:01.135261 [debug] [MainThread]: On master: COMMIT
+[0m19:46:01.136520 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m19:46:01.136960 [debug] [MainThread]: On master: Close
+[0m19:46:01.139739 [debug] [Thread-1 (]: Began running node model.fires_dbt.fires_raw
+[0m19:46:01.140517 [info ] [Thread-1 (]: 1 of 1 START sql table model public_public.fires_raw ........................... [RUN]
+[0m19:46:01.141201 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_postgres_public_public, now model.fires_dbt.fires_raw)
+[0m19:46:01.141680 [debug] [Thread-1 (]: Began compiling node model.fires_dbt.fires_raw
+[0m19:46:01.149041 [debug] [Thread-1 (]: Writing injected SQL for node "model.fires_dbt.fires_raw"
+[0m19:46:01.154662 [debug] [Thread-1 (]: Began executing node model.fires_dbt.fires_raw
+[0m19:46:01.192580 [debug] [Thread-1 (]: Writing runtime sql for node "model.fires_dbt.fires_raw"
+[0m19:46:01.198550 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m19:46:01.199202 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: BEGIN
+[0m19:46:01.199737 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:46:01.209776 [debug] [Thread-1 (]: SQL status: BEGIN in 0.010 seconds
+[0m19:46:01.210611 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m19:46:01.211273 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+
+  
+    
+
+  create  table "postgres"."public_public"."fires_raw__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+
+
+-- Modelo Bronze: datos MODIS validados y con metadata
+SELECT
+    CAST(latitude as FLOAT) as latitude,
+    CAST(longitude as FLOAT) as longitude,
+    CAST(brightness as FLOAT) as brightness,
+    CAST(scan as FLOAT) as scan,
+    CAST(track as FLOAT) as track,
+    CAST(acq_date as DATE) as acq_date,
+    CAST(acq_time as VARCHAR(10)) as acq_time,
+    CAST(satellite as VARCHAR(10)) as satellite,
+    CAST(instrument as VARCHAR(10)) as instrument,
+    CAST(confidence as INTEGER) as confidence,
+    CAST(version as VARCHAR(10)) as version,
+    CAST(bright_t31 as FLOAT) as bright_t31,
+    CAST(frp as FLOAT) as frp,
+    CAST(daynight as VARCHAR(5)) as daynight,
+
+    -- Metadata Bronze
+    CURRENT_TIMESTAMP as ingested_at,
+    'valid' as validation_status,
+    'modis-fire-two-months.csv' as source_file,
+    CURRENT_DATE as processing_date,
+
+    -- Data Quality Score basado en confidence
+    CASE
+        WHEN CAST(confidence as INTEGER) >= 80 THEN 100
+        WHEN CAST(confidence as INTEGER) >= 50 THEN 75
+        ELSE 50
+    END as data_quality_score
+
+FROM "postgres"."public"."fires_raw"
+
+-- Validaciones Bronze aplicadas en WHERE
+WHERE CAST(frp as FLOAT) > 0
+    AND CAST(confidence as INTEGER) > 30
+    AND CAST(latitude as FLOAT) IS NOT NULL
+    AND CAST(longitude as FLOAT) IS NOT NULL
+    AND CAST(latitude as FLOAT) BETWEEN -55 AND -21
+    AND CAST(longitude as FLOAT) BETWEEN -73 AND -53
+    AND CAST(acq_date as DATE) IS NOT NULL
+  );
+  
+[0m19:46:01.241393 [debug] [Thread-1 (]: SQL status: SELECT 13143 in 0.029 seconds
+[0m19:46:01.251390 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m19:46:01.252067 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+alter table "postgres"."public_public"."fires_raw__dbt_tmp" rename to "fires_raw"
+[0m19:46:01.254023 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m19:46:01.256249 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m19:46:01.256777 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+
+        INSERT INTO fires_bronze (
+                latitude, longitude, brightness, scan, track,
+                acq_date, acq_time, satellite, instrument, confidence,
+                version, bright_t31, frp, daynight, ingested_at,
+                validation_status, source_file, processing_date, data_quality_score
+            )
+            SELECT
+                CAST(latitude as FLOAT),
+                CAST(longitude as FLOAT),
+                CAST(brightness as FLOAT),
+                CAST(scan as FLOAT),
+                CAST(track as FLOAT),
+                CAST(acq_date as DATE),
+                CAST(acq_time as VARCHAR(10)),
+                CAST(satellite as VARCHAR(10)),
+                CAST(instrument as VARCHAR(10)),
+                CAST(confidence as INTEGER),
+                CAST(version as VARCHAR(10)),
+                CAST(bright_t31 as FLOAT),
+                CAST(frp as FLOAT),
+                CAST(daynight as VARCHAR(5)),
+                CURRENT_TIMESTAMP,
+                'valid',
+                'modis-fire-two-months.csv',
+                CURRENT_DATE,
+                CASE
+                    WHEN CAST(confidence as INTEGER) >= 80 THEN 100
+                    WHEN CAST(confidence as INTEGER) >= 50 THEN 75
+                    ELSE 50
+                END
+            FROM "postgres"."public"."fires_raw"
+            WHERE CAST(frp as FLOAT) > 0
+                AND CAST(confidence as INTEGER) > 30
+                AND CAST(latitude as FLOAT) IS NOT NULL
+                AND CAST(longitude as FLOAT) IS NOT NULL
+                AND CAST(latitude as FLOAT) BETWEEN -55 AND -21
+                AND CAST(longitude as FLOAT) BETWEEN -73 AND -53
+                AND CAST(acq_date as DATE) IS NOT NULL
+      
+[0m19:46:01.260346 [debug] [Thread-1 (]: Postgres adapter: Postgres error: column "acq_time" is of type bigint but expression is of type character varying
+LINE 16:                 CAST(acq_time as VARCHAR(10)),
+                         ^
+HINT:  You will need to rewrite or cast the expression.
+
+[0m19:46:01.260975 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: ROLLBACK
+[0m19:46:01.262386 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: Close
+[0m19:46:01.266356 [debug] [Thread-1 (]: Database Error in model fires_raw (models/fires_raw.sql)
+  column "acq_time" is of type bigint but expression is of type character varying
+  LINE 16:                 CAST(acq_time as VARCHAR(10)),
+                           ^
+  HINT:  You will need to rewrite or cast the expression.
+  compiled code at target/run/fires_dbt/models/fires_raw.sql
+[0m19:46:01.268152 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e6e6a48f-4ec7-4106-a918-2eba14c9a009', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x771f8bf24380>]}
+[0m19:46:01.268948 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model public_public.fires_raw .................. [[31mERROR[0m in 0.13s]
+[0m19:46:01.269782 [debug] [Thread-1 (]: Finished running node model.fires_dbt.fires_raw
+[0m19:46:01.270453 [debug] [Thread-4 (]: Marking all children of 'model.fires_dbt.fires_raw' to be skipped because of status 'error'.  Reason: Database Error in model fires_raw (models/fires_raw.sql)
+  column "acq_time" is of type bigint but expression is of type character varying
+  LINE 16:                 CAST(acq_time as VARCHAR(10)),
+                           ^
+  HINT:  You will need to rewrite or cast the expression.
+  compiled code at target/run/fires_dbt/models/fires_raw.sql.
+[0m19:46:01.272475 [debug] [MainThread]: Using postgres connection "master"
+[0m19:46:01.272908 [debug] [MainThread]: On master: BEGIN
+[0m19:46:01.273296 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m19:46:01.282618 [debug] [MainThread]: SQL status: BEGIN in 0.009 seconds
+[0m19:46:01.283264 [debug] [MainThread]: On master: COMMIT
+[0m19:46:01.283784 [debug] [MainThread]: Using postgres connection "master"
+[0m19:46:01.284254 [debug] [MainThread]: On master: COMMIT
+[0m19:46:01.285439 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m19:46:01.285887 [debug] [MainThread]: On master: Close
+[0m19:46:01.286478 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:46:01.286961 [debug] [MainThread]: Connection 'model.fires_dbt.fires_raw' was properly closed.
+[0m19:46:01.287467 [info ] [MainThread]: 
+[0m19:46:01.288013 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.27 seconds (0.27s).
+[0m19:46:01.288937 [debug] [MainThread]: Command end result
+[0m19:46:01.311864 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/manifest.json
+[0m19:46:01.316224 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/semantic_manifest.json
+[0m19:46:01.324103 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/local/airflow/dags/dbt/fire_dbt/target/run_results.json
+[0m19:46:01.324676 [info ] [MainThread]: 
+[0m19:46:01.325241 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m19:46:01.325695 [info ] [MainThread]: 
+[0m19:46:01.326253 [error] [MainThread]: [31mFailure in model fires_raw (models/fires_raw.sql)[0m
+[0m19:46:01.326784 [error] [MainThread]:   Database Error in model fires_raw (models/fires_raw.sql)
+  column "acq_time" is of type bigint but expression is of type character varying
+  LINE 16:                 CAST(acq_time as VARCHAR(10)),
+                           ^
+  HINT:  You will need to rewrite or cast the expression.
+  compiled code at target/run/fires_dbt/models/fires_raw.sql
+[0m19:46:01.327244 [info ] [MainThread]: 
+[0m19:46:01.327825 [info ] [MainThread]:   compiled code at target/compiled/fires_dbt/models/fires_raw.sql
+[0m19:46:01.328307 [info ] [MainThread]: 
+[0m19:46:01.328788 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m19:46:01.329968 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.94080716, "process_in_blocks": "0", "process_kernel_time": 0.418693, "process_mem_max_rss": "125784", "process_out_blocks": "0", "process_user_time": 2.436394}
+[0m19:46:01.330500 [debug] [MainThread]: Command `dbt run` failed at 19:46:01.330400 after 0.94 seconds
+[0m19:46:01.331024 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x771f8dda52e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x771f8db51100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x771f8dc1f050>]}
+[0m19:46:01.331506 [debug] [MainThread]: Flushing usage events
+[0m19:46:02.185348 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:47:50.597245 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7367322a0560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x736730060a70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73672fda2780>]}
+
+
+============================== 19:47:50.646488 | edd88da0-9a31-414f-8123-779b15990977 ==============================
+[0m19:47:50.646488 [info ] [MainThread]: Running with dbt=1.10.11
+[0m19:47:50.647256 [debug] [MainThread]: running dbt with arguments {'log_path': '/usr/local/airflow/dags/dbt/fire_dbt/logs', 'introspect': 'True', 'write_json': 'True', 'printer_width': '80', 'log_format': 'default', 'invocation_command': 'dbt run', 'use_colors': 'True', 'quiet': 'False', 'partial_parse': 'True', 'indirect_selection': 'eager', 'debug': 'False', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'profiles_dir': '/usr/local/airflow/dags/dbt/fire_dbt', 'cache_selected_only': 'False', 'warn_error': 'None', 'static_parser': 'True', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None'}
+[0m19:47:50.653456 [info ] [MainThread]: target not specified in profile 'fires_project', using 'default'
+[0m19:47:50.827345 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'edd88da0-9a31-414f-8123-779b15990977', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x736731ffdd00>]}
+[0m19:47:50.882720 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'edd88da0-9a31-414f-8123-779b15990977', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73672f4836e0>]}
+[0m19:47:50.883840 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m19:47:50.969348 [debug] [MainThread]: checksum: 5335e1629744fab92fa7809c625edbb36f0d7063a879d6215c971798f27e66f9, vars: {}, profile: , target: , version: 1.10.11
+[0m19:47:51.086670 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:47:51.087391 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:47:51.117643 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'edd88da0-9a31-414f-8123-779b15990977', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73672f4358e0>]}
+[0m19:47:51.188919 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/manifest.json
+[0m19:47:51.193929 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/semantic_manifest.json
+[0m19:47:51.229708 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'edd88da0-9a31-414f-8123-779b15990977', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73672f195640>]}
+[0m19:47:51.230420 [info ] [MainThread]: Found 1 model, 2 sources, 434 macros
+[0m19:47:51.230931 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'edd88da0-9a31-414f-8123-779b15990977', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73672e5e5eb0>]}
+[0m19:47:51.232787 [info ] [MainThread]: 
+[0m19:47:51.233366 [info ] [MainThread]: Concurrency: 1 threads (target='default')
+[0m19:47:51.233892 [info ] [MainThread]: 
+[0m19:47:51.234608 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m19:47:51.235909 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m19:47:51.293033 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m19:47:51.293810 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m19:47:51.294424 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:47:51.306258 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.012 seconds
+[0m19:47:51.307871 [debug] [ThreadPool]: On list_postgres: Close
+[0m19:47:51.309558 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_postgres, now list_postgres_public_public)
+[0m19:47:51.315479 [debug] [ThreadPool]: Using postgres connection "list_postgres_public_public"
+[0m19:47:51.316237 [debug] [ThreadPool]: On list_postgres_public_public: BEGIN
+[0m19:47:51.316838 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:47:51.327160 [debug] [ThreadPool]: SQL status: BEGIN in 0.010 seconds
+[0m19:47:51.327874 [debug] [ThreadPool]: Using postgres connection "list_postgres_public_public"
+[0m19:47:51.328400 [debug] [ThreadPool]: On list_postgres_public_public: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "list_postgres_public_public"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_public'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_public'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_public'
+  
+[0m19:47:51.332945 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.004 seconds
+[0m19:47:51.334682 [debug] [ThreadPool]: On list_postgres_public_public: ROLLBACK
+[0m19:47:51.336028 [debug] [ThreadPool]: On list_postgres_public_public: Close
+[0m19:47:51.340333 [debug] [MainThread]: Using postgres connection "master"
+[0m19:47:51.340863 [debug] [MainThread]: On master: BEGIN
+[0m19:47:51.341273 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:47:51.351000 [debug] [MainThread]: SQL status: BEGIN in 0.010 seconds
+[0m19:47:51.351773 [debug] [MainThread]: Using postgres connection "master"
+[0m19:47:51.352397 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m19:47:51.357051 [debug] [MainThread]: SQL status: SELECT 0 in 0.004 seconds
+[0m19:47:51.358492 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'edd88da0-9a31-414f-8123-779b15990977', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73672e581910>]}
+[0m19:47:51.359081 [debug] [MainThread]: On master: ROLLBACK
+[0m19:47:51.360847 [debug] [MainThread]: Using postgres connection "master"
+[0m19:47:51.361581 [debug] [MainThread]: On master: BEGIN
+[0m19:47:51.364216 [debug] [MainThread]: SQL status: BEGIN in 0.002 seconds
+[0m19:47:51.364808 [debug] [MainThread]: On master: COMMIT
+[0m19:47:51.365291 [debug] [MainThread]: Using postgres connection "master"
+[0m19:47:51.365760 [debug] [MainThread]: On master: COMMIT
+[0m19:47:51.366962 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m19:47:51.367392 [debug] [MainThread]: On master: Close
+[0m19:47:51.370217 [debug] [Thread-1 (]: Began running node model.fires_dbt.fires_raw
+[0m19:47:51.370969 [info ] [Thread-1 (]: 1 of 1 START sql table model public_public.fires_raw ........................... [RUN]
+[0m19:47:51.371619 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_postgres_public_public, now model.fires_dbt.fires_raw)
+[0m19:47:51.372158 [debug] [Thread-1 (]: Began compiling node model.fires_dbt.fires_raw
+[0m19:47:51.379967 [debug] [Thread-1 (]: Writing injected SQL for node "model.fires_dbt.fires_raw"
+[0m19:47:51.385377 [debug] [Thread-1 (]: Began executing node model.fires_dbt.fires_raw
+[0m19:47:51.422504 [debug] [Thread-1 (]: Writing runtime sql for node "model.fires_dbt.fires_raw"
+[0m19:47:51.428036 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m19:47:51.428663 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: BEGIN
+[0m19:47:51.429195 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:47:51.439290 [debug] [Thread-1 (]: SQL status: BEGIN in 0.010 seconds
+[0m19:47:51.440047 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m19:47:51.440643 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+
+  
+    
+
+  create  table "postgres"."public_public"."fires_raw__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+
+
+-- Modelo Bronze: datos MODIS validados y con metadata
+SELECT
+    CAST(latitude as FLOAT) as latitude,
+    CAST(longitude as FLOAT) as longitude,
+    CAST(brightness as FLOAT) as brightness,
+    CAST(scan as FLOAT) as scan,
+    CAST(track as FLOAT) as track,
+    CAST(acq_date as DATE) as acq_date,
+    CAST(acq_time as VARCHAR(10)) as acq_time,
+    CAST(satellite as VARCHAR(10)) as satellite,
+    CAST(instrument as VARCHAR(10)) as instrument,
+    CAST(confidence as INTEGER) as confidence,
+    CAST(version as VARCHAR(10)) as version,
+    CAST(bright_t31 as FLOAT) as bright_t31,
+    CAST(frp as FLOAT) as frp,
+    CAST(daynight as VARCHAR(5)) as daynight,
+
+    -- Metadata Bronze
+    CURRENT_TIMESTAMP as ingested_at,
+    'valid' as validation_status,
+    'modis-fire-two-months.csv' as source_file,
+    CURRENT_DATE as processing_date,
+
+    -- Data Quality Score basado en confidence
+    CASE
+        WHEN CAST(confidence as INTEGER) >= 80 THEN 100
+        WHEN CAST(confidence as INTEGER) >= 50 THEN 75
+        ELSE 50
+    END as data_quality_score
+
+FROM "postgres"."public"."fires_raw"
+
+-- Validaciones Bronze aplicadas en WHERE
+WHERE CAST(frp as FLOAT) > 0
+    AND CAST(confidence as INTEGER) > 30
+    AND CAST(latitude as FLOAT) IS NOT NULL
+    AND CAST(longitude as FLOAT) IS NOT NULL
+    AND CAST(latitude as FLOAT) BETWEEN -55 AND -21
+    AND CAST(longitude as FLOAT) BETWEEN -73 AND -53
+    AND CAST(acq_date as DATE) IS NOT NULL
+  );
+  
+[0m19:47:51.472559 [debug] [Thread-1 (]: SQL status: SELECT 13143 in 0.031 seconds
+[0m19:47:51.483364 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m19:47:51.484137 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+alter table "postgres"."public_public"."fires_raw__dbt_tmp" rename to "fires_raw"
+[0m19:47:51.486305 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m19:47:51.488814 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m19:47:51.489433 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+
+        INSERT INTO fires_bronze (
+                latitude, longitude, brightness, scan, track,
+                acq_date, acq_time, satellite, instrument, confidence,
+                version, bright_t31, frp, daynight, ingested_at,
+                validation_status, source_file, processing_date, data_quality_score
+            )
+            SELECT
+                CAST(latitude as FLOAT),
+                CAST(longitude as FLOAT),
+                CAST(brightness as FLOAT),
+                CAST(scan as FLOAT),
+                CAST(track as FLOAT),
+                CAST(acq_date as DATE),
+                CAST(acq_time as VARCHAR(10)),
+                CAST(satellite as VARCHAR(10)),
+                CAST(instrument as VARCHAR(10)),
+                CAST(confidence as INTEGER),
+                CAST(version as VARCHAR(10)),
+                CAST(bright_t31 as FLOAT),
+                CAST(frp as FLOAT),
+                CAST(daynight as VARCHAR(5)),
+                CURRENT_TIMESTAMP,
+                'valid',
+                'modis-fire-two-months.csv',
+                CURRENT_DATE,
+                CASE
+                    WHEN CAST(confidence as INTEGER) >= 80 THEN 100
+                    WHEN CAST(confidence as INTEGER) >= 50 THEN 75
+                    ELSE 50
+                END
+            FROM "postgres"."public"."fires_raw"
+            WHERE CAST(frp as FLOAT) > 0
+                AND CAST(confidence as INTEGER) > 30
+                AND CAST(latitude as FLOAT) IS NOT NULL
+                AND CAST(longitude as FLOAT) IS NOT NULL
+                AND CAST(latitude as FLOAT) BETWEEN -55 AND -21
+                AND CAST(longitude as FLOAT) BETWEEN -73 AND -53
+                AND CAST(acq_date as DATE) IS NOT NULL
+      
+[0m19:47:51.492901 [debug] [Thread-1 (]: Postgres adapter: Postgres error: column "acq_time" is of type bigint but expression is of type character varying
+LINE 16:                 CAST(acq_time as VARCHAR(10)),
+                         ^
+HINT:  You will need to rewrite or cast the expression.
+
+[0m19:47:51.493596 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: ROLLBACK
+[0m19:47:51.495137 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: Close
+[0m19:47:51.499434 [debug] [Thread-1 (]: Database Error in model fires_raw (models/fires_raw.sql)
+  column "acq_time" is of type bigint but expression is of type character varying
+  LINE 16:                 CAST(acq_time as VARCHAR(10)),
+                           ^
+  HINT:  You will need to rewrite or cast the expression.
+  compiled code at target/run/fires_dbt/models/fires_raw.sql
+[0m19:47:51.501299 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'edd88da0-9a31-414f-8123-779b15990977', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73672f153fe0>]}
+[0m19:47:51.502181 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model public_public.fires_raw .................. [[31mERROR[0m in 0.13s]
+[0m19:47:51.503014 [debug] [Thread-1 (]: Finished running node model.fires_dbt.fires_raw
+[0m19:47:51.503718 [debug] [Thread-4 (]: Marking all children of 'model.fires_dbt.fires_raw' to be skipped because of status 'error'.  Reason: Database Error in model fires_raw (models/fires_raw.sql)
+  column "acq_time" is of type bigint but expression is of type character varying
+  LINE 16:                 CAST(acq_time as VARCHAR(10)),
+                           ^
+  HINT:  You will need to rewrite or cast the expression.
+  compiled code at target/run/fires_dbt/models/fires_raw.sql.
+[0m19:47:51.505785 [debug] [MainThread]: Using postgres connection "master"
+[0m19:47:51.506214 [debug] [MainThread]: On master: BEGIN
+[0m19:47:51.506610 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m19:47:51.516560 [debug] [MainThread]: SQL status: BEGIN in 0.010 seconds
+[0m19:47:51.517370 [debug] [MainThread]: On master: COMMIT
+[0m19:47:51.517917 [debug] [MainThread]: Using postgres connection "master"
+[0m19:47:51.518393 [debug] [MainThread]: On master: COMMIT
+[0m19:47:51.519771 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m19:47:51.520236 [debug] [MainThread]: On master: Close
+[0m19:47:51.520899 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:47:51.521329 [debug] [MainThread]: Connection 'model.fires_dbt.fires_raw' was properly closed.
+[0m19:47:51.521819 [info ] [MainThread]: 
+[0m19:47:51.522296 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.29 seconds (0.29s).
+[0m19:47:51.523044 [debug] [MainThread]: Command end result
+[0m19:47:51.547755 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/manifest.json
+[0m19:47:51.551975 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/semantic_manifest.json
+[0m19:47:51.562431 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/local/airflow/dags/dbt/fire_dbt/target/run_results.json
+[0m19:47:51.563118 [info ] [MainThread]: 
+[0m19:47:51.563949 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m19:47:51.564535 [info ] [MainThread]: 
+[0m19:47:51.565093 [error] [MainThread]: [31mFailure in model fires_raw (models/fires_raw.sql)[0m
+[0m19:47:51.565666 [error] [MainThread]:   Database Error in model fires_raw (models/fires_raw.sql)
+  column "acq_time" is of type bigint but expression is of type character varying
+  LINE 16:                 CAST(acq_time as VARCHAR(10)),
+                           ^
+  HINT:  You will need to rewrite or cast the expression.
+  compiled code at target/run/fires_dbt/models/fires_raw.sql
+[0m19:47:51.566103 [info ] [MainThread]: 
+[0m19:47:51.566626 [info ] [MainThread]:   compiled code at target/compiled/fires_dbt/models/fires_raw.sql
+[0m19:47:51.567070 [info ] [MainThread]: 
+[0m19:47:51.567575 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m19:47:51.568787 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 1.0339226, "process_in_blocks": "0", "process_kernel_time": 0.411693, "process_mem_max_rss": "125268", "process_out_blocks": "0", "process_user_time": 2.47016}
+[0m19:47:51.569337 [debug] [MainThread]: Command `dbt run` failed at 19:47:51.569216 after 1.03 seconds
+[0m19:47:51.569866 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x736732317260>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73672f810c20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7367308f35c0>]}
+[0m19:47:51.570413 [debug] [MainThread]: Flushing usage events
+[0m19:47:52.411410 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:49:18.438223 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d0bbac2ea0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d0bee26b10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d0bbae2f30>]}
+
+
+============================== 19:49:18.483453 | f5c05b5b-f3a7-4a0d-a785-f298192f5f20 ==============================
+[0m19:49:18.483453 [info ] [MainThread]: Running with dbt=1.10.11
+[0m19:49:18.484325 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'debug': 'False', 'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'log_path': '/usr/local/airflow/dags/dbt/fire_dbt/logs', 'use_colors': 'True', 'partial_parse': 'True', 'fail_fast': 'False', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'warn_error': 'None', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'empty': 'False', 'quiet': 'False', 'printer_width': '80', 'static_parser': 'True', 'log_format': 'default', 'version_check': 'True', 'profiles_dir': '/usr/local/airflow/dags/dbt/fire_dbt', 'target_path': 'None', 'write_json': 'True', 'invocation_command': 'dbt run'}
+[0m19:49:18.490377 [info ] [MainThread]: target not specified in profile 'fires_project', using 'default'
+[0m19:49:18.648895 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f5c05b5b-f3a7-4a0d-a785-f298192f5f20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d0bdcb2150>]}
+[0m19:49:18.701157 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f5c05b5b-f3a7-4a0d-a785-f298192f5f20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d0baffc0e0>]}
+[0m19:49:18.702207 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m19:49:18.782801 [debug] [MainThread]: checksum: 5335e1629744fab92fa7809c625edbb36f0d7063a879d6215c971798f27e66f9, vars: {}, profile: , target: , version: 1.10.11
+[0m19:49:18.886719 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:49:18.887361 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:49:18.914596 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f5c05b5b-f3a7-4a0d-a785-f298192f5f20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d0bb2357f0>]}
+[0m19:49:18.977719 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/manifest.json
+[0m19:49:18.981864 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/semantic_manifest.json
+[0m19:49:19.014583 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f5c05b5b-f3a7-4a0d-a785-f298192f5f20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d0bae6b4d0>]}
+[0m19:49:19.015220 [info ] [MainThread]: Found 1 model, 2 sources, 434 macros
+[0m19:49:19.015695 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f5c05b5b-f3a7-4a0d-a785-f298192f5f20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d0bb31a360>]}
+[0m19:49:19.017282 [info ] [MainThread]: 
+[0m19:49:19.017824 [info ] [MainThread]: Concurrency: 1 threads (target='default')
+[0m19:49:19.018362 [info ] [MainThread]: 
+[0m19:49:19.019082 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m19:49:19.020245 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m19:49:19.069013 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m19:49:19.069613 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m19:49:19.070054 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:49:19.080974 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.011 seconds
+[0m19:49:19.082559 [debug] [ThreadPool]: On list_postgres: Close
+[0m19:49:19.084071 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_postgres, now list_postgres_public_public)
+[0m19:49:19.089494 [debug] [ThreadPool]: Using postgres connection "list_postgres_public_public"
+[0m19:49:19.089983 [debug] [ThreadPool]: On list_postgres_public_public: BEGIN
+[0m19:49:19.090398 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:49:19.100260 [debug] [ThreadPool]: SQL status: BEGIN in 0.010 seconds
+[0m19:49:19.100886 [debug] [ThreadPool]: Using postgres connection "list_postgres_public_public"
+[0m19:49:19.101399 [debug] [ThreadPool]: On list_postgres_public_public: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "list_postgres_public_public"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_public'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_public'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_public'
+  
+[0m19:49:19.105481 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.004 seconds
+[0m19:49:19.106829 [debug] [ThreadPool]: On list_postgres_public_public: ROLLBACK
+[0m19:49:19.108143 [debug] [ThreadPool]: On list_postgres_public_public: Close
+[0m19:49:19.111894 [debug] [MainThread]: Using postgres connection "master"
+[0m19:49:19.112394 [debug] [MainThread]: On master: BEGIN
+[0m19:49:19.112878 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:49:19.122607 [debug] [MainThread]: SQL status: BEGIN in 0.010 seconds
+[0m19:49:19.123246 [debug] [MainThread]: Using postgres connection "master"
+[0m19:49:19.123751 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m19:49:19.128055 [debug] [MainThread]: SQL status: SELECT 0 in 0.004 seconds
+[0m19:49:19.129352 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f5c05b5b-f3a7-4a0d-a785-f298192f5f20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d0bd0fe090>]}
+[0m19:49:19.129888 [debug] [MainThread]: On master: ROLLBACK
+[0m19:49:19.131072 [debug] [MainThread]: Using postgres connection "master"
+[0m19:49:19.131493 [debug] [MainThread]: On master: BEGIN
+[0m19:49:19.133448 [debug] [MainThread]: SQL status: BEGIN in 0.002 seconds
+[0m19:49:19.133863 [debug] [MainThread]: On master: COMMIT
+[0m19:49:19.134295 [debug] [MainThread]: Using postgres connection "master"
+[0m19:49:19.134700 [debug] [MainThread]: On master: COMMIT
+[0m19:49:19.135875 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m19:49:19.136298 [debug] [MainThread]: On master: Close
+[0m19:49:19.138975 [debug] [Thread-1 (]: Began running node model.fires_dbt.fires_raw
+[0m19:49:19.139714 [info ] [Thread-1 (]: 1 of 1 START sql table model public_public.fires_raw ........................... [RUN]
+[0m19:49:19.140403 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_postgres_public_public, now model.fires_dbt.fires_raw)
+[0m19:49:19.140940 [debug] [Thread-1 (]: Began compiling node model.fires_dbt.fires_raw
+[0m19:49:19.148521 [debug] [Thread-1 (]: Writing injected SQL for node "model.fires_dbt.fires_raw"
+[0m19:49:19.153261 [debug] [Thread-1 (]: Began executing node model.fires_dbt.fires_raw
+[0m19:49:19.187708 [debug] [Thread-1 (]: Writing runtime sql for node "model.fires_dbt.fires_raw"
+[0m19:49:19.193971 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m19:49:19.194519 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: BEGIN
+[0m19:49:19.195016 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:49:19.204625 [debug] [Thread-1 (]: SQL status: BEGIN in 0.009 seconds
+[0m19:49:19.205281 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m19:49:19.205786 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+
+  
+    
+
+  create  table "postgres"."public_public"."fires_raw__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+
+
+-- Modelo Bronze: datos MODIS validados y con metadata
+SELECT
+    CAST(latitude as FLOAT) as latitude,
+    CAST(longitude as FLOAT) as longitude,
+    CAST(brightness as FLOAT) as brightness,
+    CAST(scan as FLOAT) as scan,
+    CAST(track as FLOAT) as track,
+    CAST(acq_date as DATE) as acq_date,
+    CAST(acq_time as VARCHAR(10)) as acq_time,
+    CAST(satellite as VARCHAR(10)) as satellite,
+    CAST(instrument as VARCHAR(10)) as instrument,
+    CAST(confidence as INTEGER) as confidence,
+    CAST(version as VARCHAR(10)) as version,
+    CAST(bright_t31 as FLOAT) as bright_t31,
+    CAST(frp as FLOAT) as frp,
+    CAST(daynight as VARCHAR(5)) as daynight,
+
+    -- Metadata Bronze
+    CURRENT_TIMESTAMP as ingested_at,
+    'valid' as validation_status,
+    'modis-fire-two-months.csv' as source_file,
+    CURRENT_DATE as processing_date,
+
+    -- Data Quality Score basado en confidence
+    CASE
+        WHEN CAST(confidence as INTEGER) >= 80 THEN 100
+        WHEN CAST(confidence as INTEGER) >= 50 THEN 75
+        ELSE 50
+    END as data_quality_score
+
+FROM "postgres"."public"."fires_raw"
+
+-- Validaciones Bronze aplicadas en WHERE
+WHERE CAST(frp as FLOAT) > 0
+    AND CAST(confidence as INTEGER) > 30
+    AND CAST(latitude as FLOAT) IS NOT NULL
+    AND CAST(longitude as FLOAT) IS NOT NULL
+    AND CAST(latitude as FLOAT) BETWEEN -55 AND -21
+    AND CAST(longitude as FLOAT) BETWEEN -73 AND -53
+    AND CAST(acq_date as DATE) IS NOT NULL
+  );
+  
+[0m19:49:19.249643 [debug] [Thread-1 (]: SQL status: SELECT 13143 in 0.043 seconds
+[0m19:49:19.258926 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m19:49:19.259468 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+alter table "postgres"."public_public"."fires_raw__dbt_tmp" rename to "fires_raw"
+[0m19:49:19.261173 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m19:49:19.263137 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m19:49:19.263628 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+
+        INSERT INTO fires_bronze (
+                latitude, longitude, brightness, scan, track,
+                acq_date, acq_time, satellite, instrument, confidence,
+                version, bright_t31, frp, daynight, ingested_at,
+                validation_status, source_file, processing_date, data_quality_score
+            )
+            SELECT
+                CAST(latitude as FLOAT),
+                CAST(longitude as FLOAT),
+                CAST(brightness as FLOAT),
+                CAST(scan as FLOAT),
+                CAST(track as FLOAT),
+                CAST(acq_date as DATE),
+                CAST(acq_time as VARCHAR(10)),
+                CAST(satellite as VARCHAR(10)),
+                CAST(instrument as VARCHAR(10)),
+                CAST(confidence as INTEGER),
+                CAST(version as VARCHAR(10)),
+                CAST(bright_t31 as FLOAT),
+                CAST(frp as FLOAT),
+                CAST(daynight as VARCHAR(5)),
+                CURRENT_TIMESTAMP,
+                'valid',
+                'modis-fire-two-months.csv',
+                CURRENT_DATE,
+                CASE
+                    WHEN CAST(confidence as INTEGER) >= 80 THEN 100
+                    WHEN CAST(confidence as INTEGER) >= 50 THEN 75
+                    ELSE 50
+                END
+            FROM "postgres"."public"."fires_raw"
+            WHERE CAST(frp as FLOAT) > 0
+                AND CAST(confidence as INTEGER) > 30
+                AND CAST(latitude as FLOAT) IS NOT NULL
+                AND CAST(longitude as FLOAT) IS NOT NULL
+                AND CAST(latitude as FLOAT) BETWEEN -55 AND -21
+                AND CAST(longitude as FLOAT) BETWEEN -73 AND -53
+                AND CAST(acq_date as DATE) IS NOT NULL
+      
+[0m19:49:19.266846 [debug] [Thread-1 (]: Postgres adapter: Postgres error: column "acq_time" is of type bigint but expression is of type character varying
+LINE 16:                 CAST(acq_time as VARCHAR(10)),
+                         ^
+HINT:  You will need to rewrite or cast the expression.
+
+[0m19:49:19.267511 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: ROLLBACK
+[0m19:49:19.268963 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: Close
+[0m19:49:19.272998 [debug] [Thread-1 (]: Database Error in model fires_raw (models/fires_raw.sql)
+  column "acq_time" is of type bigint but expression is of type character varying
+  LINE 16:                 CAST(acq_time as VARCHAR(10)),
+                           ^
+  HINT:  You will need to rewrite or cast the expression.
+  compiled code at target/run/fires_dbt/models/fires_raw.sql
+[0m19:49:19.274704 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f5c05b5b-f3a7-4a0d-a785-f298192f5f20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d0b9524530>]}
+[0m19:49:19.275476 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model public_public.fires_raw .................. [[31mERROR[0m in 0.13s]
+[0m19:49:19.276341 [debug] [Thread-1 (]: Finished running node model.fires_dbt.fires_raw
+[0m19:49:19.277008 [debug] [Thread-4 (]: Marking all children of 'model.fires_dbt.fires_raw' to be skipped because of status 'error'.  Reason: Database Error in model fires_raw (models/fires_raw.sql)
+  column "acq_time" is of type bigint but expression is of type character varying
+  LINE 16:                 CAST(acq_time as VARCHAR(10)),
+                           ^
+  HINT:  You will need to rewrite or cast the expression.
+  compiled code at target/run/fires_dbt/models/fires_raw.sql.
+[0m19:49:19.278896 [debug] [MainThread]: Using postgres connection "master"
+[0m19:49:19.279327 [debug] [MainThread]: On master: BEGIN
+[0m19:49:19.279673 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m19:49:19.288944 [debug] [MainThread]: SQL status: BEGIN in 0.009 seconds
+[0m19:49:19.289536 [debug] [MainThread]: On master: COMMIT
+[0m19:49:19.289994 [debug] [MainThread]: Using postgres connection "master"
+[0m19:49:19.290360 [debug] [MainThread]: On master: COMMIT
+[0m19:49:19.291538 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m19:49:19.291977 [debug] [MainThread]: On master: Close
+[0m19:49:19.292583 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:49:19.292981 [debug] [MainThread]: Connection 'model.fires_dbt.fires_raw' was properly closed.
+[0m19:49:19.293398 [info ] [MainThread]: 
+[0m19:49:19.293869 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.27 seconds (0.27s).
+[0m19:49:19.294683 [debug] [MainThread]: Command end result
+[0m19:49:19.316926 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/manifest.json
+[0m19:49:19.321031 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/semantic_manifest.json
+[0m19:49:19.328657 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/local/airflow/dags/dbt/fire_dbt/target/run_results.json
+[0m19:49:19.329318 [info ] [MainThread]: 
+[0m19:49:19.330022 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m19:49:19.330540 [info ] [MainThread]: 
+[0m19:49:19.331118 [error] [MainThread]: [31mFailure in model fires_raw (models/fires_raw.sql)[0m
+[0m19:49:19.331621 [error] [MainThread]:   Database Error in model fires_raw (models/fires_raw.sql)
+  column "acq_time" is of type bigint but expression is of type character varying
+  LINE 16:                 CAST(acq_time as VARCHAR(10)),
+                           ^
+  HINT:  You will need to rewrite or cast the expression.
+  compiled code at target/run/fires_dbt/models/fires_raw.sql
+[0m19:49:19.332078 [info ] [MainThread]: 
+[0m19:49:19.332560 [info ] [MainThread]:   compiled code at target/compiled/fires_dbt/models/fires_raw.sql
+[0m19:49:19.332993 [info ] [MainThread]: 
+[0m19:49:19.333455 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m19:49:19.334516 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.9555712, "process_in_blocks": "0", "process_kernel_time": 0.373051, "process_mem_max_rss": "125400", "process_out_blocks": "0", "process_user_time": 2.434862}
+[0m19:49:19.335064 [debug] [MainThread]: Command `dbt run` failed at 19:49:19.334928 after 0.96 seconds
+[0m19:49:19.335558 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d0bf8faf90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d0bb06c170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d0bb0bff80>]}
+[0m19:49:19.335982 [debug] [MainThread]: Flushing usage events
+[0m19:49:20.334383 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:51:06.046738 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768a7a97f530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768a79bbc4a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768a7a06a840>]}
+
+
+============================== 19:51:06.091098 | 7c1b8844-8e79-4dc1-8045-d2458a7c5b2d ==============================
+[0m19:51:06.091098 [info ] [MainThread]: Running with dbt=1.10.11
+[0m19:51:06.091892 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'use_experimental_parser': 'False', 'debug': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'warn_error': 'None', 'quiet': 'False', 'use_colors': 'True', 'introspect': 'True', 'log_path': '/usr/local/airflow/dags/dbt/fire_dbt/logs', 'partial_parse': 'True', 'write_json': 'True', 'log_format': 'default', 'version_check': 'True', 'profiles_dir': '/usr/local/airflow/dags/dbt/fire_dbt', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'target_path': 'None', 'no_print': 'None', 'indirect_selection': 'eager', 'invocation_command': 'dbt run'}
+[0m19:51:06.097856 [info ] [MainThread]: target not specified in profile 'fires_project', using 'default'
+[0m19:51:06.262100 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7c1b8844-8e79-4dc1-8045-d2458a7c5b2d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768a79fbe450>]}
+[0m19:51:06.316712 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7c1b8844-8e79-4dc1-8045-d2458a7c5b2d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768a7a97d760>]}
+[0m19:51:06.317813 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m19:51:06.401074 [debug] [MainThread]: checksum: 5335e1629744fab92fa7809c625edbb36f0d7063a879d6215c971798f27e66f9, vars: {}, profile: , target: , version: 1.10.11
+[0m19:51:06.507578 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:51:06.508094 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:51:06.534993 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7c1b8844-8e79-4dc1-8045-d2458a7c5b2d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768a7937a5d0>]}
+[0m19:51:06.597973 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/manifest.json
+[0m19:51:06.602285 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/semantic_manifest.json
+[0m19:51:06.634131 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7c1b8844-8e79-4dc1-8045-d2458a7c5b2d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768a7919f710>]}
+[0m19:51:06.634782 [info ] [MainThread]: Found 1 model, 2 sources, 434 macros
+[0m19:51:06.635275 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7c1b8844-8e79-4dc1-8045-d2458a7c5b2d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768a79379970>]}
+[0m19:51:06.636836 [info ] [MainThread]: 
+[0m19:51:06.637302 [info ] [MainThread]: Concurrency: 1 threads (target='default')
+[0m19:51:06.637800 [info ] [MainThread]: 
+[0m19:51:06.638413 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m19:51:06.639527 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m19:51:06.686555 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m19:51:06.687211 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m19:51:06.687829 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:51:06.698965 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.011 seconds
+[0m19:51:06.700581 [debug] [ThreadPool]: On list_postgres: Close
+[0m19:51:06.702023 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_postgres, now list_postgres_public_public)
+[0m19:51:06.707184 [debug] [ThreadPool]: Using postgres connection "list_postgres_public_public"
+[0m19:51:06.707665 [debug] [ThreadPool]: On list_postgres_public_public: BEGIN
+[0m19:51:06.708092 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:51:06.717771 [debug] [ThreadPool]: SQL status: BEGIN in 0.010 seconds
+[0m19:51:06.718374 [debug] [ThreadPool]: Using postgres connection "list_postgres_public_public"
+[0m19:51:06.718827 [debug] [ThreadPool]: On list_postgres_public_public: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "list_postgres_public_public"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_public'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_public'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_public'
+  
+[0m19:51:06.723411 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.004 seconds
+[0m19:51:06.724817 [debug] [ThreadPool]: On list_postgres_public_public: ROLLBACK
+[0m19:51:06.726076 [debug] [ThreadPool]: On list_postgres_public_public: Close
+[0m19:51:06.730053 [debug] [MainThread]: Using postgres connection "master"
+[0m19:51:06.730505 [debug] [MainThread]: On master: BEGIN
+[0m19:51:06.730939 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:51:06.740452 [debug] [MainThread]: SQL status: BEGIN in 0.009 seconds
+[0m19:51:06.741052 [debug] [MainThread]: Using postgres connection "master"
+[0m19:51:06.741563 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m19:51:06.746439 [debug] [MainThread]: SQL status: SELECT 0 in 0.004 seconds
+[0m19:51:06.747799 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7c1b8844-8e79-4dc1-8045-d2458a7c5b2d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768a77901460>]}
+[0m19:51:06.748325 [debug] [MainThread]: On master: ROLLBACK
+[0m19:51:06.749492 [debug] [MainThread]: Using postgres connection "master"
+[0m19:51:06.749899 [debug] [MainThread]: On master: BEGIN
+[0m19:51:06.751918 [debug] [MainThread]: SQL status: BEGIN in 0.002 seconds
+[0m19:51:06.752350 [debug] [MainThread]: On master: COMMIT
+[0m19:51:06.752750 [debug] [MainThread]: Using postgres connection "master"
+[0m19:51:06.753120 [debug] [MainThread]: On master: COMMIT
+[0m19:51:06.754213 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m19:51:06.754651 [debug] [MainThread]: On master: Close
+[0m19:51:06.757301 [debug] [Thread-1 (]: Began running node model.fires_dbt.fires_raw
+[0m19:51:06.757966 [info ] [Thread-1 (]: 1 of 1 START sql table model public_public.fires_raw ........................... [RUN]
+[0m19:51:06.758583 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_postgres_public_public, now model.fires_dbt.fires_raw)
+[0m19:51:06.759064 [debug] [Thread-1 (]: Began compiling node model.fires_dbt.fires_raw
+[0m19:51:06.765919 [debug] [Thread-1 (]: Writing injected SQL for node "model.fires_dbt.fires_raw"
+[0m19:51:06.771200 [debug] [Thread-1 (]: Began executing node model.fires_dbt.fires_raw
+[0m19:51:06.805069 [debug] [Thread-1 (]: Writing runtime sql for node "model.fires_dbt.fires_raw"
+[0m19:51:06.810577 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m19:51:06.811087 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: BEGIN
+[0m19:51:06.811560 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:51:06.821053 [debug] [Thread-1 (]: SQL status: BEGIN in 0.009 seconds
+[0m19:51:06.821724 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m19:51:06.822234 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+
+  
+    
+
+  create  table "postgres"."public_public"."fires_raw__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+
+
+-- Modelo Bronze: datos MODIS validados y con metadata
+SELECT
+    CAST(latitude as FLOAT) as latitude,
+    CAST(longitude as FLOAT) as longitude,
+    CAST(brightness as FLOAT) as brightness,
+    CAST(scan as FLOAT) as scan,
+    CAST(track as FLOAT) as track,
+    CAST(acq_date as DATE) as acq_date,
+    CAST(acq_time as VARCHAR(10)) as acq_time,
+    CAST(satellite as VARCHAR(10)) as satellite,
+    CAST(instrument as VARCHAR(10)) as instrument,
+    CAST(confidence as INTEGER) as confidence,
+    CAST(version as VARCHAR(10)) as version,
+    CAST(bright_t31 as FLOAT) as bright_t31,
+    CAST(frp as FLOAT) as frp,
+    CAST(daynight as VARCHAR(5)) as daynight,
+
+    -- Metadata Bronze
+    CURRENT_TIMESTAMP as ingested_at,
+    'valid' as validation_status,
+    'modis-fire-two-months.csv' as source_file,
+    CURRENT_DATE as processing_date,
+
+    -- Data Quality Score basado en confidence
+    CASE
+        WHEN CAST(confidence as INTEGER) >= 80 THEN 100
+        WHEN CAST(confidence as INTEGER) >= 50 THEN 75
+        ELSE 50
+    END as data_quality_score
+
+FROM "postgres"."public"."fires_raw"
+
+-- Validaciones Bronze aplicadas en WHERE
+WHERE CAST(frp as FLOAT) > 0
+    AND CAST(confidence as INTEGER) > 30
+    AND CAST(latitude as FLOAT) IS NOT NULL
+    AND CAST(longitude as FLOAT) IS NOT NULL
+    AND CAST(latitude as FLOAT) BETWEEN -55 AND -21
+    AND CAST(longitude as FLOAT) BETWEEN -73 AND -53
+    AND CAST(acq_date as DATE) IS NOT NULL
+  );
+  
+[0m19:51:06.852912 [debug] [Thread-1 (]: SQL status: SELECT 13143 in 0.030 seconds
+[0m19:51:06.861583 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m19:51:06.862124 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+alter table "postgres"."public_public"."fires_raw__dbt_tmp" rename to "fires_raw"
+[0m19:51:06.863831 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m19:51:06.865669 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m19:51:06.866134 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+
+        INSERT INTO fires_bronze (
+                latitude, longitude, brightness, scan, track,
+                acq_date, acq_time, satellite, instrument, confidence,
+                version, bright_t31, frp, daynight, ingested_at,
+                validation_status, source_file, processing_date, data_quality_score
+            )
+            SELECT
+                CAST(latitude as FLOAT),
+                CAST(longitude as FLOAT),
+                CAST(brightness as FLOAT),
+                CAST(scan as FLOAT),
+                CAST(track as FLOAT),
+                CAST(acq_date as DATE),
+                CAST(acq_time as VARCHAR(10)),
+                CAST(satellite as VARCHAR(10)),
+                CAST(instrument as VARCHAR(10)),
+                CAST(confidence as INTEGER),
+                CAST(version as VARCHAR(10)),
+                CAST(bright_t31 as FLOAT),
+                CAST(frp as FLOAT),
+                CAST(daynight as VARCHAR(5)),
+                CURRENT_TIMESTAMP,
+                'valid',
+                'modis-fire-two-months.csv',
+                CURRENT_DATE,
+                CASE
+                    WHEN CAST(confidence as INTEGER) >= 80 THEN 100
+                    WHEN CAST(confidence as INTEGER) >= 50 THEN 75
+                    ELSE 50
+                END
+            FROM "postgres"."public"."fires_raw"
+            WHERE CAST(frp as FLOAT) > 0
+                AND CAST(confidence as INTEGER) > 30
+                AND CAST(latitude as FLOAT) IS NOT NULL
+                AND CAST(longitude as FLOAT) IS NOT NULL
+                AND CAST(latitude as FLOAT) BETWEEN -55 AND -21
+                AND CAST(longitude as FLOAT) BETWEEN -73 AND -53
+                AND CAST(acq_date as DATE) IS NOT NULL
+      
+[0m19:51:06.869279 [debug] [Thread-1 (]: Postgres adapter: Postgres error: column "acq_time" is of type bigint but expression is of type character varying
+LINE 16:                 CAST(acq_time as VARCHAR(10)),
+                         ^
+HINT:  You will need to rewrite or cast the expression.
+
+[0m19:51:06.869999 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: ROLLBACK
+[0m19:51:06.871428 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: Close
+[0m19:51:06.875295 [debug] [Thread-1 (]: Database Error in model fires_raw (models/fires_raw.sql)
+  column "acq_time" is of type bigint but expression is of type character varying
+  LINE 16:                 CAST(acq_time as VARCHAR(10)),
+                           ^
+  HINT:  You will need to rewrite or cast the expression.
+  compiled code at target/run/fires_dbt/models/fires_raw.sql
+[0m19:51:06.877015 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7c1b8844-8e79-4dc1-8045-d2458a7c5b2d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768a77539fa0>]}
+[0m19:51:06.877720 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model public_public.fires_raw .................. [[31mERROR[0m in 0.12s]
+[0m19:51:06.878498 [debug] [Thread-1 (]: Finished running node model.fires_dbt.fires_raw
+[0m19:51:06.879203 [debug] [Thread-4 (]: Marking all children of 'model.fires_dbt.fires_raw' to be skipped because of status 'error'.  Reason: Database Error in model fires_raw (models/fires_raw.sql)
+  column "acq_time" is of type bigint but expression is of type character varying
+  LINE 16:                 CAST(acq_time as VARCHAR(10)),
+                           ^
+  HINT:  You will need to rewrite or cast the expression.
+  compiled code at target/run/fires_dbt/models/fires_raw.sql.
+[0m19:51:06.881108 [debug] [MainThread]: Using postgres connection "master"
+[0m19:51:06.881507 [debug] [MainThread]: On master: BEGIN
+[0m19:51:06.881860 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m19:51:06.890911 [debug] [MainThread]: SQL status: BEGIN in 0.009 seconds
+[0m19:51:06.891509 [debug] [MainThread]: On master: COMMIT
+[0m19:51:06.891913 [debug] [MainThread]: Using postgres connection "master"
+[0m19:51:06.892263 [debug] [MainThread]: On master: COMMIT
+[0m19:51:06.893400 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m19:51:06.893811 [debug] [MainThread]: On master: Close
+[0m19:51:06.894364 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:51:06.894785 [debug] [MainThread]: Connection 'model.fires_dbt.fires_raw' was properly closed.
+[0m19:51:06.895205 [info ] [MainThread]: 
+[0m19:51:06.895700 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.26 seconds (0.26s).
+[0m19:51:06.896456 [debug] [MainThread]: Command end result
+[0m19:51:06.918775 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/manifest.json
+[0m19:51:06.923074 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/semantic_manifest.json
+[0m19:51:06.930742 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/local/airflow/dags/dbt/fire_dbt/target/run_results.json
+[0m19:51:06.931269 [info ] [MainThread]: 
+[0m19:51:06.931821 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m19:51:06.932271 [info ] [MainThread]: 
+[0m19:51:06.932791 [error] [MainThread]: [31mFailure in model fires_raw (models/fires_raw.sql)[0m
+[0m19:51:06.933298 [error] [MainThread]:   Database Error in model fires_raw (models/fires_raw.sql)
+  column "acq_time" is of type bigint but expression is of type character varying
+  LINE 16:                 CAST(acq_time as VARCHAR(10)),
+                           ^
+  HINT:  You will need to rewrite or cast the expression.
+  compiled code at target/run/fires_dbt/models/fires_raw.sql
+[0m19:51:06.933750 [info ] [MainThread]: 
+[0m19:51:06.934275 [info ] [MainThread]:   compiled code at target/compiled/fires_dbt/models/fires_raw.sql
+[0m19:51:06.934704 [info ] [MainThread]: 
+[0m19:51:06.935219 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m19:51:06.936365 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.9464002, "process_in_blocks": "0", "process_kernel_time": 0.382956, "process_mem_max_rss": "125172", "process_out_blocks": "0", "process_user_time": 2.393477}
+[0m19:51:06.936881 [debug] [MainThread]: Command `dbt run` failed at 19:51:06.936769 after 0.95 seconds
+[0m19:51:06.937380 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768a7a091280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768a7a64c4a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768a7a64c9b0>]}
+[0m19:51:06.937888 [debug] [MainThread]: Flushing usage events
+[0m19:51:07.740648 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:52:55.470477 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x705e6d9cb830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x705e6e6d21b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x705e6d7319d0>]}
+
+
+============================== 19:52:55.513954 | d9c3bc4b-6792-4f8d-a9c5-91d408215bbd ==============================
+[0m19:52:55.513954 [info ] [MainThread]: Running with dbt=1.10.11
+[0m19:52:55.514748 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'profiles_dir': '/usr/local/airflow/dags/dbt/fire_dbt', 'quiet': 'False', 'invocation_command': 'dbt run', 'printer_width': '80', 'cache_selected_only': 'False', 'empty': 'False', 'introspect': 'True', 'log_path': '/usr/local/airflow/dags/dbt/fire_dbt/logs', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'target_path': 'None', 'static_parser': 'True', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'warn_error': 'None', 'partial_parse': 'True', 'log_format': 'default', 'use_colors': 'True', 'debug': 'False'}
+[0m19:52:55.520645 [info ] [MainThread]: target not specified in profile 'fires_project', using 'default'
+[0m19:52:55.675906 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd9c3bc4b-6792-4f8d-a9c5-91d408215bbd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x705e6c526900>]}
+[0m19:52:55.727868 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd9c3bc4b-6792-4f8d-a9c5-91d408215bbd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x705e6d346e70>]}
+[0m19:52:55.728990 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m19:52:55.809564 [debug] [MainThread]: checksum: 5335e1629744fab92fa7809c625edbb36f0d7063a879d6215c971798f27e66f9, vars: {}, profile: , target: , version: 1.10.11
+[0m19:52:55.912557 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:52:55.913192 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:52:55.940576 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd9c3bc4b-6792-4f8d-a9c5-91d408215bbd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x705e6c40f320>]}
+[0m19:52:56.002974 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/manifest.json
+[0m19:52:56.007319 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/semantic_manifest.json
+[0m19:52:56.038762 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd9c3bc4b-6792-4f8d-a9c5-91d408215bbd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x705e6c2ab050>]}
+[0m19:52:56.039353 [info ] [MainThread]: Found 1 model, 2 sources, 434 macros
+[0m19:52:56.039913 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd9c3bc4b-6792-4f8d-a9c5-91d408215bbd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x705e6c3f0380>]}
+[0m19:52:56.041477 [info ] [MainThread]: 
+[0m19:52:56.041970 [info ] [MainThread]: Concurrency: 1 threads (target='default')
+[0m19:52:56.042386 [info ] [MainThread]: 
+[0m19:52:56.043016 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m19:52:56.044114 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m19:52:56.091272 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m19:52:56.091958 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m19:52:56.092441 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:52:56.102953 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.010 seconds
+[0m19:52:56.104456 [debug] [ThreadPool]: On list_postgres: Close
+[0m19:52:56.105745 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_postgres, now list_postgres_public_public)
+[0m19:52:56.111111 [debug] [ThreadPool]: Using postgres connection "list_postgres_public_public"
+[0m19:52:56.111665 [debug] [ThreadPool]: On list_postgres_public_public: BEGIN
+[0m19:52:56.112112 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:52:56.121285 [debug] [ThreadPool]: SQL status: BEGIN in 0.009 seconds
+[0m19:52:56.121954 [debug] [ThreadPool]: Using postgres connection "list_postgres_public_public"
+[0m19:52:56.122398 [debug] [ThreadPool]: On list_postgres_public_public: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "list_postgres_public_public"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_public'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_public'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_public'
+  
+[0m19:52:56.126168 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.003 seconds
+[0m19:52:56.127499 [debug] [ThreadPool]: On list_postgres_public_public: ROLLBACK
+[0m19:52:56.128609 [debug] [ThreadPool]: On list_postgres_public_public: Close
+[0m19:52:56.132427 [debug] [MainThread]: Using postgres connection "master"
+[0m19:52:56.132903 [debug] [MainThread]: On master: BEGIN
+[0m19:52:56.133278 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:52:56.142055 [debug] [MainThread]: SQL status: BEGIN in 0.009 seconds
+[0m19:52:56.142687 [debug] [MainThread]: Using postgres connection "master"
+[0m19:52:56.143147 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m19:52:56.147472 [debug] [MainThread]: SQL status: SELECT 0 in 0.004 seconds
+[0m19:52:56.148829 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd9c3bc4b-6792-4f8d-a9c5-91d408215bbd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x705e6c3c6b40>]}
+[0m19:52:56.149336 [debug] [MainThread]: On master: ROLLBACK
+[0m19:52:56.150644 [debug] [MainThread]: Using postgres connection "master"
+[0m19:52:56.151087 [debug] [MainThread]: On master: BEGIN
+[0m19:52:56.153050 [debug] [MainThread]: SQL status: BEGIN in 0.002 seconds
+[0m19:52:56.153598 [debug] [MainThread]: On master: COMMIT
+[0m19:52:56.154127 [debug] [MainThread]: Using postgres connection "master"
+[0m19:52:56.154534 [debug] [MainThread]: On master: COMMIT
+[0m19:52:56.155906 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m19:52:56.156357 [debug] [MainThread]: On master: Close
+[0m19:52:56.158827 [debug] [Thread-1 (]: Began running node model.fires_dbt.fires_raw
+[0m19:52:56.159453 [info ] [Thread-1 (]: 1 of 1 START sql table model public_public.fires_raw ........................... [RUN]
+[0m19:52:56.160073 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_postgres_public_public, now model.fires_dbt.fires_raw)
+[0m19:52:56.160567 [debug] [Thread-1 (]: Began compiling node model.fires_dbt.fires_raw
+[0m19:52:56.167608 [debug] [Thread-1 (]: Writing injected SQL for node "model.fires_dbt.fires_raw"
+[0m19:52:56.173079 [debug] [Thread-1 (]: Began executing node model.fires_dbt.fires_raw
+[0m19:52:56.206789 [debug] [Thread-1 (]: Writing runtime sql for node "model.fires_dbt.fires_raw"
+[0m19:52:56.211766 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m19:52:56.212268 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: BEGIN
+[0m19:52:56.212678 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:52:56.222057 [debug] [Thread-1 (]: SQL status: BEGIN in 0.009 seconds
+[0m19:52:56.222690 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m19:52:56.223174 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+
+  
+    
+
+  create  table "postgres"."public_public"."fires_raw__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+
+
+-- Modelo Bronze: datos MODIS validados y con metadata
+SELECT
+    CAST(latitude as FLOAT) as latitude,
+    CAST(longitude as FLOAT) as longitude,
+    CAST(brightness as FLOAT) as brightness,
+    CAST(scan as FLOAT) as scan,
+    CAST(track as FLOAT) as track,
+    CAST(acq_date as DATE) as acq_date,
+    CAST(acq_time as VARCHAR(10)) as acq_time,
+    CAST(satellite as VARCHAR(10)) as satellite,
+    CAST(instrument as VARCHAR(10)) as instrument,
+    CAST(confidence as INTEGER) as confidence,
+    CAST(version as VARCHAR(10)) as version,
+    CAST(bright_t31 as FLOAT) as bright_t31,
+    CAST(frp as FLOAT) as frp,
+    CAST(daynight as VARCHAR(5)) as daynight,
+
+    -- Metadata Bronze
+    CURRENT_TIMESTAMP as ingested_at,
+    'valid' as validation_status,
+    'modis-fire-two-months.csv' as source_file,
+    CURRENT_DATE as processing_date,
+
+    -- Data Quality Score basado en confidence
+    CASE
+        WHEN CAST(confidence as INTEGER) >= 80 THEN 100
+        WHEN CAST(confidence as INTEGER) >= 50 THEN 75
+        ELSE 50
+    END as data_quality_score
+
+FROM "postgres"."public"."fires_raw"
+
+-- Validaciones Bronze aplicadas en WHERE
+WHERE CAST(frp as FLOAT) > 0
+    AND CAST(confidence as INTEGER) > 30
+    AND CAST(latitude as FLOAT) IS NOT NULL
+    AND CAST(longitude as FLOAT) IS NOT NULL
+    AND CAST(latitude as FLOAT) BETWEEN -55 AND -21
+    AND CAST(longitude as FLOAT) BETWEEN -73 AND -53
+    AND CAST(acq_date as DATE) IS NOT NULL
+  );
+  
+[0m19:52:56.251944 [debug] [Thread-1 (]: SQL status: SELECT 13143 in 0.028 seconds
+[0m19:52:56.260726 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m19:52:56.261308 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+alter table "postgres"."public_public"."fires_raw__dbt_tmp" rename to "fires_raw"
+[0m19:52:56.262857 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m19:52:56.264734 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m19:52:56.265211 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+
+        INSERT INTO fires_bronze (
+                latitude, longitude, brightness, scan, track,
+                acq_date, acq_time, satellite, instrument, confidence,
+                version, bright_t31, frp, daynight, ingested_at,
+                validation_status, source_file, processing_date, data_quality_score
+            )
+            SELECT
+                CAST(latitude as FLOAT),
+                CAST(longitude as FLOAT),
+                CAST(brightness as FLOAT),
+                CAST(scan as FLOAT),
+                CAST(track as FLOAT),
+                CAST(acq_date as DATE),
+                CAST(acq_time as VARCHAR(10)),
+                CAST(satellite as VARCHAR(10)),
+                CAST(instrument as VARCHAR(10)),
+                CAST(confidence as INTEGER),
+                CAST(version as VARCHAR(10)),
+                CAST(bright_t31 as FLOAT),
+                CAST(frp as FLOAT),
+                CAST(daynight as VARCHAR(5)),
+                CURRENT_TIMESTAMP,
+                'valid',
+                'modis-fire-two-months.csv',
+                CURRENT_DATE,
+                CASE
+                    WHEN CAST(confidence as INTEGER) >= 80 THEN 100
+                    WHEN CAST(confidence as INTEGER) >= 50 THEN 75
+                    ELSE 50
+                END
+            FROM "postgres"."public"."fires_raw"
+            WHERE CAST(frp as FLOAT) > 0
+                AND CAST(confidence as INTEGER) > 30
+                AND CAST(latitude as FLOAT) IS NOT NULL
+                AND CAST(longitude as FLOAT) IS NOT NULL
+                AND CAST(latitude as FLOAT) BETWEEN -55 AND -21
+                AND CAST(longitude as FLOAT) BETWEEN -73 AND -53
+                AND CAST(acq_date as DATE) IS NOT NULL
+      
+[0m19:52:56.268201 [debug] [Thread-1 (]: Postgres adapter: Postgres error: column "acq_time" is of type bigint but expression is of type character varying
+LINE 16:                 CAST(acq_time as VARCHAR(10)),
+                         ^
+HINT:  You will need to rewrite or cast the expression.
+
+[0m19:52:56.268777 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: ROLLBACK
+[0m19:52:56.270164 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: Close
+[0m19:52:56.274087 [debug] [Thread-1 (]: Database Error in model fires_raw (models/fires_raw.sql)
+  column "acq_time" is of type bigint but expression is of type character varying
+  LINE 16:                 CAST(acq_time as VARCHAR(10)),
+                           ^
+  HINT:  You will need to rewrite or cast the expression.
+  compiled code at target/run/fires_dbt/models/fires_raw.sql
+[0m19:52:56.275817 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd9c3bc4b-6792-4f8d-a9c5-91d408215bbd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x705e6a9454c0>]}
+[0m19:52:56.276515 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model public_public.fires_raw .................. [[31mERROR[0m in 0.11s]
+[0m19:52:56.277195 [debug] [Thread-1 (]: Finished running node model.fires_dbt.fires_raw
+[0m19:52:56.277930 [debug] [Thread-4 (]: Marking all children of 'model.fires_dbt.fires_raw' to be skipped because of status 'error'.  Reason: Database Error in model fires_raw (models/fires_raw.sql)
+  column "acq_time" is of type bigint but expression is of type character varying
+  LINE 16:                 CAST(acq_time as VARCHAR(10)),
+                           ^
+  HINT:  You will need to rewrite or cast the expression.
+  compiled code at target/run/fires_dbt/models/fires_raw.sql.
+[0m19:52:56.279764 [debug] [MainThread]: Using postgres connection "master"
+[0m19:52:56.280187 [debug] [MainThread]: On master: BEGIN
+[0m19:52:56.280572 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m19:52:56.289434 [debug] [MainThread]: SQL status: BEGIN in 0.009 seconds
+[0m19:52:56.290039 [debug] [MainThread]: On master: COMMIT
+[0m19:52:56.290482 [debug] [MainThread]: Using postgres connection "master"
+[0m19:52:56.290832 [debug] [MainThread]: On master: COMMIT
+[0m19:52:56.292070 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m19:52:56.292460 [debug] [MainThread]: On master: Close
+[0m19:52:56.293043 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:52:56.293413 [debug] [MainThread]: Connection 'model.fires_dbt.fires_raw' was properly closed.
+[0m19:52:56.293842 [info ] [MainThread]: 
+[0m19:52:56.294333 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.25 seconds (0.25s).
+[0m19:52:56.295078 [debug] [MainThread]: Command end result
+[0m19:52:56.316778 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/manifest.json
+[0m19:52:56.320856 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/semantic_manifest.json
+[0m19:52:56.328304 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/local/airflow/dags/dbt/fire_dbt/target/run_results.json
+[0m19:52:56.328814 [info ] [MainThread]: 
+[0m19:52:56.329335 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m19:52:56.329813 [info ] [MainThread]: 
+[0m19:52:56.330424 [error] [MainThread]: [31mFailure in model fires_raw (models/fires_raw.sql)[0m
+[0m19:52:56.330920 [error] [MainThread]:   Database Error in model fires_raw (models/fires_raw.sql)
+  column "acq_time" is of type bigint but expression is of type character varying
+  LINE 16:                 CAST(acq_time as VARCHAR(10)),
+                           ^
+  HINT:  You will need to rewrite or cast the expression.
+  compiled code at target/run/fires_dbt/models/fires_raw.sql
+[0m19:52:56.331358 [info ] [MainThread]: 
+[0m19:52:56.331845 [info ] [MainThread]:   compiled code at target/compiled/fires_dbt/models/fires_raw.sql
+[0m19:52:56.332266 [info ] [MainThread]: 
+[0m19:52:56.332716 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m19:52:56.333766 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.92035383, "process_in_blocks": "0", "process_kernel_time": 0.405948, "process_mem_max_rss": "125712", "process_out_blocks": "0", "process_user_time": 2.347265}
+[0m19:52:56.334312 [debug] [MainThread]: Command `dbt run` failed at 19:52:56.334216 after 0.92 seconds
+[0m19:52:56.334766 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x705e6d438980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x705e6da82a80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x705e6a94ae70>]}
+[0m19:52:56.335226 [debug] [MainThread]: Flushing usage events
+[0m19:52:57.132683 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:54:25.320203 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d581a733080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d5819986570>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d5819984a70>]}
+
+
+============================== 20:54:25.361147 | edef70bc-74a3-4194-97c0-eb6f3b8309ba ==============================
+[0m20:54:25.361147 [info ] [MainThread]: Running with dbt=1.10.11
+[0m20:54:25.361759 [debug] [MainThread]: running dbt with arguments {'log_path': '/usr/local/airflow/dags/dbt/fire_dbt/logs', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'debug': 'False', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'write_json': 'True', 'warn_error': 'None', 'target_path': 'None', 'profiles_dir': '/usr/local/airflow/dags/dbt/fire_dbt', 'invocation_command': 'dbt run', 'introspect': 'True', 'no_print': 'None', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'empty': 'False', 'version_check': 'True', 'log_format': 'default', 'printer_width': '80', 'use_colors': 'True', 'partial_parse': 'True'}
+[0m20:54:25.367488 [info ] [MainThread]: target not specified in profile 'fires_project', using 'default'
+[0m20:54:25.647672 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'edef70bc-74a3-4194-97c0-eb6f3b8309ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d58192b7230>]}
+[0m20:54:25.704905 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'edef70bc-74a3-4194-97c0-eb6f3b8309ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d581bc8e8d0>]}
+[0m20:54:25.706439 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m20:54:25.794383 [debug] [MainThread]: checksum: 5335e1629744fab92fa7809c625edbb36f0d7063a879d6215c971798f27e66f9, vars: {}, profile: , target: , version: 1.10.11
+[0m20:54:26.002415 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m20:54:26.003305 [debug] [MainThread]: Partial parsing: updated file: fires_dbt://models/fires_raw.sql
+[0m20:54:26.250287 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'edef70bc-74a3-4194-97c0-eb6f3b8309ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d5817fa9970>]}
+[0m20:54:26.315755 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/manifest.json
+[0m20:54:26.320690 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/semantic_manifest.json
+[0m20:54:26.368348 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'edef70bc-74a3-4194-97c0-eb6f3b8309ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d58183fc620>]}
+[0m20:54:26.369130 [info ] [MainThread]: Found 1 model, 2 sources, 434 macros
+[0m20:54:26.369783 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'edef70bc-74a3-4194-97c0-eb6f3b8309ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d5818347410>]}
+[0m20:54:26.371619 [info ] [MainThread]: 
+[0m20:54:26.372206 [info ] [MainThread]: Concurrency: 1 threads (target='default')
+[0m20:54:26.372677 [info ] [MainThread]: 
+[0m20:54:26.373316 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m20:54:26.374444 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m20:54:26.433898 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m20:54:26.434941 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m20:54:26.435567 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:54:26.449083 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.013 seconds
+[0m20:54:26.450793 [debug] [ThreadPool]: On list_postgres: Close
+[0m20:54:26.452483 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_postgres, now list_postgres_public_public)
+[0m20:54:26.458330 [debug] [ThreadPool]: Using postgres connection "list_postgres_public_public"
+[0m20:54:26.458885 [debug] [ThreadPool]: On list_postgres_public_public: BEGIN
+[0m20:54:26.459298 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:54:26.469242 [debug] [ThreadPool]: SQL status: BEGIN in 0.010 seconds
+[0m20:54:26.470098 [debug] [ThreadPool]: Using postgres connection "list_postgres_public_public"
+[0m20:54:26.470646 [debug] [ThreadPool]: On list_postgres_public_public: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "list_postgres_public_public"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_public'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_public'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_public'
+  
+[0m20:54:26.475780 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.005 seconds
+[0m20:54:26.477176 [debug] [ThreadPool]: On list_postgres_public_public: ROLLBACK
+[0m20:54:26.478564 [debug] [ThreadPool]: On list_postgres_public_public: Close
+[0m20:54:26.482987 [debug] [MainThread]: Using postgres connection "master"
+[0m20:54:26.483548 [debug] [MainThread]: On master: BEGIN
+[0m20:54:26.483962 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:54:26.493534 [debug] [MainThread]: SQL status: BEGIN in 0.009 seconds
+[0m20:54:26.494164 [debug] [MainThread]: Using postgres connection "master"
+[0m20:54:26.494718 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m20:54:26.500625 [debug] [MainThread]: SQL status: SELECT 0 in 0.005 seconds
+[0m20:54:26.502228 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'edef70bc-74a3-4194-97c0-eb6f3b8309ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d5816f04f20>]}
+[0m20:54:26.503303 [debug] [MainThread]: On master: ROLLBACK
+[0m20:54:26.505030 [debug] [MainThread]: Using postgres connection "master"
+[0m20:54:26.505513 [debug] [MainThread]: On master: BEGIN
+[0m20:54:26.507427 [debug] [MainThread]: SQL status: BEGIN in 0.002 seconds
+[0m20:54:26.507894 [debug] [MainThread]: On master: COMMIT
+[0m20:54:26.508331 [debug] [MainThread]: Using postgres connection "master"
+[0m20:54:26.508733 [debug] [MainThread]: On master: COMMIT
+[0m20:54:26.509885 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m20:54:26.510300 [debug] [MainThread]: On master: Close
+[0m20:54:26.514179 [debug] [Thread-1 (]: Began running node model.fires_dbt.fires_raw
+[0m20:54:26.514855 [info ] [Thread-1 (]: 1 of 1 START sql table model public_public.fires_raw ........................... [RUN]
+[0m20:54:26.515438 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_postgres_public_public, now model.fires_dbt.fires_raw)
+[0m20:54:26.515869 [debug] [Thread-1 (]: Began compiling node model.fires_dbt.fires_raw
+[0m20:54:26.523544 [debug] [Thread-1 (]: Writing injected SQL for node "model.fires_dbt.fires_raw"
+[0m20:54:26.528765 [debug] [Thread-1 (]: Began executing node model.fires_dbt.fires_raw
+[0m20:54:26.564102 [debug] [Thread-1 (]: Writing runtime sql for node "model.fires_dbt.fires_raw"
+[0m20:54:26.569277 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m20:54:26.570211 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: BEGIN
+[0m20:54:26.570746 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:54:26.580489 [debug] [Thread-1 (]: SQL status: BEGIN in 0.010 seconds
+[0m20:54:26.581172 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m20:54:26.581705 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+
+  
+    
+
+  create  table "postgres"."public_public"."fires_raw__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+
+
+-- Modelo Bronze: datos MODIS validados y con metadata
+SELECT
+    CAST(latitude as FLOAT) as latitude,
+    CAST(longitude as FLOAT) as longitude,
+    CAST(brightness as FLOAT) as brightness,
+    CAST(scan as FLOAT) as scan,
+    CAST(track as FLOAT) as track,
+    CAST(acq_date as DATE) as acq_date,
+    acq_time,
+    CAST(satellite as VARCHAR(10)) as satellite,
+    CAST(instrument as VARCHAR(10)) as instrument,
+    CAST(confidence as INTEGER) as confidence,
+    CAST(version as VARCHAR(10)) as version,
+    CAST(bright_t31 as FLOAT) as bright_t31,
+    CAST(frp as FLOAT) as frp,
+    CAST(daynight as VARCHAR(5)) as daynight,
+
+    -- Metadata Bronze
+    CURRENT_TIMESTAMP as ingested_at,
+    'valid' as validation_status,
+    'modis-fire-two-months.csv' as source_file,
+    CURRENT_DATE as processing_date,
+
+    -- Data Quality Score basado en confidence
+    CASE
+        WHEN CAST(confidence as INTEGER) >= 80 THEN 100
+        WHEN CAST(confidence as INTEGER) >= 50 THEN 75
+        ELSE 50
+    END as data_quality_score
+
+FROM "postgres"."public"."fires_raw"
+
+-- Validaciones Bronze aplicadas en WHERE
+WHERE CAST(frp as FLOAT) > 0
+    AND CAST(confidence as INTEGER) > 30
+    AND CAST(latitude as FLOAT) IS NOT NULL
+    AND CAST(longitude as FLOAT) IS NOT NULL
+    AND CAST(latitude as FLOAT) BETWEEN -55 AND -21
+    AND CAST(longitude as FLOAT) BETWEEN -73 AND -53
+    AND CAST(acq_date as DATE) IS NOT NULL
+  );
+  
+[0m20:54:26.664412 [debug] [Thread-1 (]: SQL status: SELECT 13143 in 0.082 seconds
+[0m20:54:26.673497 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m20:54:26.674156 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+alter table "postgres"."public_public"."fires_raw__dbt_tmp" rename to "fires_raw"
+[0m20:54:26.676749 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m20:54:26.678781 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m20:54:26.679274 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+
+        INSERT INTO fires_bronze (
+                latitude, longitude, brightness, scan, track,
+                acq_date, acq_time, satellite, instrument, confidence,
+                version, bright_t31, frp, daynight, ingested_at,
+                validation_status, source_file, processing_date, data_quality_score
+            )
+            SELECT
+                CAST(latitude as FLOAT),
+                CAST(longitude as FLOAT),
+                CAST(brightness as FLOAT),
+                CAST(scan as FLOAT),
+                CAST(track as FLOAT),
+                CAST(acq_date as DATE),
+                acq_time,
+                CAST(satellite as VARCHAR(10)),
+                CAST(instrument as VARCHAR(10)),
+                CAST(confidence as INTEGER),
+                CAST(version as VARCHAR(10)),
+                CAST(bright_t31 as FLOAT),
+                CAST(frp as FLOAT),
+                CAST(daynight as VARCHAR(5)),
+                CURRENT_TIMESTAMP,
+                'valid',
+                'modis-fire-two-months.csv',
+                CURRENT_DATE,
+                CASE
+                    WHEN CAST(confidence as INTEGER) >= 80 THEN 100
+                    WHEN CAST(confidence as INTEGER) >= 50 THEN 75
+                    ELSE 50
+                END
+            FROM "postgres"."public"."fires_raw"
+            WHERE CAST(frp as FLOAT) > 0
+                AND CAST(confidence as INTEGER) > 30
+                AND CAST(latitude as FLOAT) IS NOT NULL
+                AND CAST(longitude as FLOAT) IS NOT NULL
+                AND CAST(latitude as FLOAT) BETWEEN -55 AND -21
+                AND CAST(longitude as FLOAT) BETWEEN -73 AND -53
+                AND CAST(acq_date as DATE) IS NOT NULL
+      
+[0m20:54:26.772339 [debug] [Thread-1 (]: SQL status: INSERT 0 13143 in 0.092 seconds
+[0m20:54:26.785454 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: COMMIT
+[0m20:54:26.786220 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m20:54:26.786829 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: COMMIT
+[0m20:54:26.971473 [debug] [Thread-1 (]: SQL status: COMMIT in 0.184 seconds
+[0m20:54:26.977225 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public_public"."fires_raw__dbt_backup"
+[0m20:54:26.982107 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m20:54:26.982596 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+drop table if exists "postgres"."public_public"."fires_raw__dbt_backup" cascade
+[0m20:54:26.984187 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m20:54:26.986480 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: Close
+[0m20:54:26.989014 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'edef70bc-74a3-4194-97c0-eb6f3b8309ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d5816fba000>]}
+[0m20:54:26.989823 [info ] [Thread-1 (]: 1 of 1 OK created sql table model public_public.fires_raw ...................... [[32mSELECT 13143[0m in 0.47s]
+[0m20:54:26.990478 [debug] [Thread-1 (]: Finished running node model.fires_dbt.fires_raw
+[0m20:54:26.991938 [debug] [MainThread]: Using postgres connection "master"
+[0m20:54:26.992375 [debug] [MainThread]: On master: BEGIN
+[0m20:54:26.992762 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:54:27.001182 [debug] [MainThread]: SQL status: BEGIN in 0.008 seconds
+[0m20:54:27.001767 [debug] [MainThread]: On master: COMMIT
+[0m20:54:27.002182 [debug] [MainThread]: Using postgres connection "master"
+[0m20:54:27.002537 [debug] [MainThread]: On master: COMMIT
+[0m20:54:27.004289 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m20:54:27.004859 [debug] [MainThread]: On master: Close
+[0m20:54:27.005411 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:54:27.005811 [debug] [MainThread]: Connection 'model.fires_dbt.fires_raw' was properly closed.
+[0m20:54:27.006310 [info ] [MainThread]: 
+[0m20:54:27.006773 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.63 seconds (0.63s).
+[0m20:54:27.007572 [debug] [MainThread]: Command end result
+[0m20:54:27.031060 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/manifest.json
+[0m20:54:27.035509 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/semantic_manifest.json
+[0m20:54:27.043749 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/local/airflow/dags/dbt/fire_dbt/target/run_results.json
+[0m20:54:27.044287 [info ] [MainThread]: 
+[0m20:54:27.044834 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:54:27.045284 [info ] [MainThread]: 
+[0m20:54:27.045756 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m20:54:27.047187 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.7855008, "process_in_blocks": "65656", "process_kernel_time": 0.466441, "process_mem_max_rss": "128400", "process_out_blocks": "0", "process_user_time": 2.83886}
+[0m20:54:27.047756 [debug] [MainThread]: Command `dbt run` succeeded at 20:54:27.047663 after 1.79 seconds
+[0m20:54:27.048218 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d581a421d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d58187583e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d58187c95e0>]}
+[0m20:54:27.048687 [debug] [MainThread]: Flushing usage events
+[0m20:54:27.928662 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:02:25.619693 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79d0e12f7f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79d0e32e99d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79d0e12f6d20>]}
+
+
+============================== 21:02:25.664303 | 8a69ccf1-7b85-4f7f-989f-45fdf085205d ==============================
+[0m21:02:25.664303 [info ] [MainThread]: Running with dbt=1.10.11
+[0m21:02:25.665033 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'log_cache_events': 'False', 'write_json': 'True', 'log_path': '/usr/local/airflow/dags/dbt/fire_dbt/logs', 'printer_width': '80', 'indirect_selection': 'eager', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'target_path': 'None', 'invocation_command': 'dbt run', 'use_colors': 'True', 'warn_error': 'None', 'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'profiles_dir': '/usr/local/airflow/dags/dbt/fire_dbt', 'version_check': 'True', 'static_parser': 'True', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'empty': 'False', 'cache_selected_only': 'False', 'debug': 'False'}
+[0m21:02:25.671032 [info ] [MainThread]: target not specified in profile 'fires_project', using 'default'
+[0m21:02:26.754601 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8a69ccf1-7b85-4f7f-989f-45fdf085205d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79d0e0b6b230>]}
+[0m21:02:26.806623 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8a69ccf1-7b85-4f7f-989f-45fdf085205d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79d0e04c2b10>]}
+[0m21:02:26.820861 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m21:02:26.976360 [debug] [MainThread]: checksum: 5335e1629744fab92fa7809c625edbb36f0d7063a879d6215c971798f27e66f9, vars: {}, profile: , target: , version: 1.10.11
+[0m21:02:27.348433 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:02:27.349052 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:02:27.376553 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8a69ccf1-7b85-4f7f-989f-45fdf085205d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79d0e0339790>]}
+[0m21:02:27.440740 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/manifest.json
+[0m21:02:27.445422 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/semantic_manifest.json
+[0m21:02:27.491542 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8a69ccf1-7b85-4f7f-989f-45fdf085205d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79d0e01d8ec0>]}
+[0m21:02:27.492181 [info ] [MainThread]: Found 1 model, 2 sources, 434 macros
+[0m21:02:27.492682 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8a69ccf1-7b85-4f7f-989f-45fdf085205d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79d0e03617c0>]}
+[0m21:02:27.494287 [info ] [MainThread]: 
+[0m21:02:27.494780 [info ] [MainThread]: Concurrency: 1 threads (target='default')
+[0m21:02:27.495223 [info ] [MainThread]: 
+[0m21:02:27.495861 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m21:02:27.497127 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m21:02:27.556845 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m21:02:27.557453 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m21:02:27.557860 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:02:27.570167 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.012 seconds
+[0m21:02:27.571813 [debug] [ThreadPool]: On list_postgres: Close
+[0m21:02:27.573458 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_postgres, now list_postgres_public_public)
+[0m21:02:27.578730 [debug] [ThreadPool]: Using postgres connection "list_postgres_public_public"
+[0m21:02:27.579317 [debug] [ThreadPool]: On list_postgres_public_public: BEGIN
+[0m21:02:27.579745 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:02:27.588804 [debug] [ThreadPool]: SQL status: BEGIN in 0.009 seconds
+[0m21:02:27.589414 [debug] [ThreadPool]: Using postgres connection "list_postgres_public_public"
+[0m21:02:27.589877 [debug] [ThreadPool]: On list_postgres_public_public: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "list_postgres_public_public"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_public'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_public'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_public'
+  
+[0m21:02:27.594712 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.004 seconds
+[0m21:02:27.596234 [debug] [ThreadPool]: On list_postgres_public_public: ROLLBACK
+[0m21:02:27.597441 [debug] [ThreadPool]: On list_postgres_public_public: Close
+[0m21:02:27.601464 [debug] [MainThread]: Using postgres connection "master"
+[0m21:02:27.601930 [debug] [MainThread]: On master: BEGIN
+[0m21:02:27.602329 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:02:27.611866 [debug] [MainThread]: SQL status: BEGIN in 0.009 seconds
+[0m21:02:27.612519 [debug] [MainThread]: Using postgres connection "master"
+[0m21:02:27.613010 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m21:02:27.618003 [debug] [MainThread]: SQL status: SELECT 0 in 0.005 seconds
+[0m21:02:27.619327 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8a69ccf1-7b85-4f7f-989f-45fdf085205d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79d0df56f260>]}
+[0m21:02:27.619888 [debug] [MainThread]: On master: ROLLBACK
+[0m21:02:27.621231 [debug] [MainThread]: Using postgres connection "master"
+[0m21:02:27.621719 [debug] [MainThread]: On master: BEGIN
+[0m21:02:27.624030 [debug] [MainThread]: SQL status: BEGIN in 0.002 seconds
+[0m21:02:27.624542 [debug] [MainThread]: On master: COMMIT
+[0m21:02:27.624986 [debug] [MainThread]: Using postgres connection "master"
+[0m21:02:27.625477 [debug] [MainThread]: On master: COMMIT
+[0m21:02:27.626808 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m21:02:27.627283 [debug] [MainThread]: On master: Close
+[0m21:02:27.631238 [debug] [Thread-1 (]: Began running node model.fires_dbt.fires_raw
+[0m21:02:27.631932 [info ] [Thread-1 (]: 1 of 1 START sql table model public_public.fires_raw ........................... [RUN]
+[0m21:02:27.632512 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_postgres_public_public, now model.fires_dbt.fires_raw)
+[0m21:02:27.632992 [debug] [Thread-1 (]: Began compiling node model.fires_dbt.fires_raw
+[0m21:02:27.640257 [debug] [Thread-1 (]: Writing injected SQL for node "model.fires_dbt.fires_raw"
+[0m21:02:27.645619 [debug] [Thread-1 (]: Began executing node model.fires_dbt.fires_raw
+[0m21:02:27.680886 [debug] [Thread-1 (]: Writing runtime sql for node "model.fires_dbt.fires_raw"
+[0m21:02:27.686366 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m21:02:27.686880 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: BEGIN
+[0m21:02:27.687330 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:02:27.696804 [debug] [Thread-1 (]: SQL status: BEGIN in 0.009 seconds
+[0m21:02:27.697446 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m21:02:27.697930 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+
+  
+    
+
+  create  table "postgres"."public_public"."fires_raw__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+
+
+-- Modelo Bronze: datos MODIS validados y con metadata
+SELECT
+    CAST(latitude as FLOAT) as latitude,
+    CAST(longitude as FLOAT) as longitude,
+    CAST(brightness as FLOAT) as brightness,
+    CAST(scan as FLOAT) as scan,
+    CAST(track as FLOAT) as track,
+    CAST(acq_date as DATE) as acq_date,
+    acq_time,
+    CAST(satellite as VARCHAR(10)) as satellite,
+    CAST(instrument as VARCHAR(10)) as instrument,
+    CAST(confidence as INTEGER) as confidence,
+    CAST(version as VARCHAR(10)) as version,
+    CAST(bright_t31 as FLOAT) as bright_t31,
+    CAST(frp as FLOAT) as frp,
+    CAST(daynight as VARCHAR(5)) as daynight,
+
+    -- Metadata Bronze
+    CURRENT_TIMESTAMP as ingested_at,
+    'valid' as validation_status,
+    'modis-fire-two-months.csv' as source_file,
+    CURRENT_DATE as processing_date,
+
+    -- Data Quality Score basado en confidence
+    CASE
+        WHEN CAST(confidence as INTEGER) >= 80 THEN 100
+        WHEN CAST(confidence as INTEGER) >= 50 THEN 75
+        ELSE 50
+    END as data_quality_score
+
+FROM "postgres"."public"."fires_raw"
+
+-- Validaciones Bronze aplicadas en WHERE
+WHERE CAST(frp as FLOAT) > 0
+    AND CAST(confidence as INTEGER) > 30
+    AND CAST(latitude as FLOAT) IS NOT NULL
+    AND CAST(longitude as FLOAT) IS NOT NULL
+    AND CAST(latitude as FLOAT) BETWEEN -55 AND -21
+    AND CAST(longitude as FLOAT) BETWEEN -73 AND -53
+    AND CAST(acq_date as DATE) IS NOT NULL
+  );
+  
+[0m21:02:27.860929 [debug] [Thread-1 (]: SQL status: SELECT 13143 in 0.162 seconds
+[0m21:02:27.869300 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m21:02:27.869778 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+alter table "postgres"."public_public"."fires_raw" rename to "fires_raw__dbt_backup"
+[0m21:02:27.871581 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:02:27.874648 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m21:02:27.875181 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+alter table "postgres"."public_public"."fires_raw__dbt_tmp" rename to "fires_raw"
+[0m21:02:27.877060 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:02:27.879153 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m21:02:27.879678 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+
+        INSERT INTO fires_bronze (
+                latitude, longitude, brightness, scan, track,
+                acq_date, acq_time, satellite, instrument, confidence,
+                version, bright_t31, frp, daynight, ingested_at,
+                validation_status, source_file, processing_date, data_quality_score
+            )
+            SELECT
+                CAST(latitude as FLOAT),
+                CAST(longitude as FLOAT),
+                CAST(brightness as FLOAT),
+                CAST(scan as FLOAT),
+                CAST(track as FLOAT),
+                CAST(acq_date as DATE),
+                acq_time,
+                CAST(satellite as VARCHAR(10)),
+                CAST(instrument as VARCHAR(10)),
+                CAST(confidence as INTEGER),
+                CAST(version as VARCHAR(10)),
+                CAST(bright_t31 as FLOAT),
+                CAST(frp as FLOAT),
+                CAST(daynight as VARCHAR(5)),
+                CURRENT_TIMESTAMP,
+                'valid',
+                'modis-fire-two-months.csv',
+                CURRENT_DATE,
+                CASE
+                    WHEN CAST(confidence as INTEGER) >= 80 THEN 100
+                    WHEN CAST(confidence as INTEGER) >= 50 THEN 75
+                    ELSE 50
+                END
+            FROM "postgres"."public"."fires_raw"
+            WHERE CAST(frp as FLOAT) > 0
+                AND CAST(confidence as INTEGER) > 30
+                AND CAST(latitude as FLOAT) IS NOT NULL
+                AND CAST(longitude as FLOAT) IS NOT NULL
+                AND CAST(latitude as FLOAT) BETWEEN -55 AND -21
+                AND CAST(longitude as FLOAT) BETWEEN -73 AND -53
+                AND CAST(acq_date as DATE) IS NOT NULL
+      
+[0m21:02:27.910115 [debug] [Thread-1 (]: SQL status: INSERT 0 13143 in 0.030 seconds
+[0m21:02:27.924100 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: COMMIT
+[0m21:02:27.924780 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m21:02:27.925279 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: COMMIT
+[0m21:02:28.700364 [debug] [Thread-1 (]: SQL status: COMMIT in 0.774 seconds
+[0m21:02:28.706464 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public_public"."fires_raw__dbt_backup"
+[0m21:02:28.711703 [debug] [Thread-1 (]: Using postgres connection "model.fires_dbt.fires_raw"
+[0m21:02:28.712192 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: /* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "fires_project", "target_name": "default", "node_id": "model.fires_dbt.fires_raw"} */
+drop table if exists "postgres"."public_public"."fires_raw__dbt_backup" cascade
+[0m21:02:28.716167 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.004 seconds
+[0m21:02:28.718673 [debug] [Thread-1 (]: On model.fires_dbt.fires_raw: Close
+[0m21:02:28.848549 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8a69ccf1-7b85-4f7f-989f-45fdf085205d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79d0e2fdf9b0>]}
+[0m21:02:28.849590 [info ] [Thread-1 (]: 1 of 1 OK created sql table model public_public.fires_raw ...................... [[32mSELECT 13143[0m in 1.09s]
+[0m21:02:28.850365 [debug] [Thread-1 (]: Finished running node model.fires_dbt.fires_raw
+[0m21:02:28.851913 [debug] [MainThread]: Using postgres connection "master"
+[0m21:02:28.852310 [debug] [MainThread]: On master: BEGIN
+[0m21:02:28.852675 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:02:28.862604 [debug] [MainThread]: SQL status: BEGIN in 0.010 seconds
+[0m21:02:28.863246 [debug] [MainThread]: On master: COMMIT
+[0m21:02:28.863705 [debug] [MainThread]: Using postgres connection "master"
+[0m21:02:28.864128 [debug] [MainThread]: On master: COMMIT
+[0m21:02:28.865284 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m21:02:28.865676 [debug] [MainThread]: On master: Close
+[0m21:02:28.866246 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:02:28.866633 [debug] [MainThread]: Connection 'model.fires_dbt.fires_raw' was properly closed.
+[0m21:02:28.867044 [info ] [MainThread]: 
+[0m21:02:28.867569 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 1.37 seconds (1.37s).
+[0m21:02:28.868388 [debug] [MainThread]: Command end result
+[0m21:02:28.892229 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/manifest.json
+[0m21:02:28.896135 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/local/airflow/dags/dbt/fire_dbt/target/semantic_manifest.json
+[0m21:02:28.903392 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/local/airflow/dags/dbt/fire_dbt/target/run_results.json
+[0m21:02:28.903895 [info ] [MainThread]: 
+[0m21:02:28.904414 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:02:28.904868 [info ] [MainThread]: 
+[0m21:02:28.905335 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m21:02:28.907011 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 3.4980469, "process_in_blocks": "65288", "process_kernel_time": 0.567091, "process_mem_max_rss": "124764", "process_out_blocks": "0", "process_user_time": 2.684761}
+[0m21:02:28.907728 [debug] [MainThread]: Command `dbt run` succeeded at 21:02:28.907615 after 3.50 seconds
+[0m21:02:28.908196 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79d0e32e44a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79d0df995bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79d0e075b380>]}
+[0m21:02:28.908661 [debug] [MainThread]: Flushing usage events
+[0m21:02:29.658031 [debug] [MainThread]: An error was encountered while trying to flush usage events

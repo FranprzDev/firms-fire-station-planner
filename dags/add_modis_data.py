@@ -122,6 +122,13 @@ def load_bronze_data(**context) -> None:
     valid_path = context['ti'].xcom_pull(task_ids='validate_and_clean')
     df = pd.read_csv(valid_path)
 
+    # Asegurar tipos de datos correctos antes de cargar a PostgreSQL
+    df['acq_time'] = df['acq_time'].astype(str)
+    df['satellite'] = df['satellite'].astype(str)
+    df['instrument'] = df['instrument'].astype(str)
+    df['version'] = df['version'].astype(str)
+    df['daynight'] = df['daynight'].astype(str)
+
     conn = BaseHook.get_connection('postgres_default')
     engine = create_engine(f'postgresql://{conn.login}:{conn.password}@{conn.host}:{conn.port}/{conn.schema}')
 
@@ -138,6 +145,14 @@ def load_bronze_data(**context) -> None:
 def load_data(**context) -> None:
     temp_path = context['ti'].xcom_pull(task_ids='extract_data_raw')
     df = pd.read_csv(temp_path)
+
+    # Asegurar tipos de datos correctos antes de cargar a PostgreSQL
+    df['acq_time'] = df['acq_time'].astype(str)
+    df['satellite'] = df['satellite'].astype(str)
+    df['instrument'] = df['instrument'].astype(str)
+    df['version'] = df['version'].astype(str)
+    df['daynight'] = df['daynight'].astype(str)
+
     conn = BaseHook.get_connection('postgres_default')
     engine = create_engine(f'postgresql://{conn.login}:{conn.password}@{conn.host}:{conn.port}/{conn.schema}')
     df.to_sql('fires_raw', engine, if_exists='replace', index=False)
