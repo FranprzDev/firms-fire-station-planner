@@ -7,4 +7,12 @@ fires_project:
       user: postgres
       password: postgres
       port: 5432
-      schema: public  
+      schema: public
+    dev:
+      type: postgres
+      host: host.docker.internal  
+      dbname: postgres 
+      user: postgres
+      password: postgres
+      port: 5432
+      schema: public
