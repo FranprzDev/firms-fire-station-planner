@@ -9,3 +9,11 @@ airflow-webserver.pid
 webserver_config.py
 airflow.cfg
 airflow.db
+# DBT
+**/target/
+**/logs/
+*.log
+profiles.yml
+
+# Docker
+.dockerignore
