@@ -76,8 +76,9 @@ El pipeline sigue un enfoque de capas de datos (Bronze, Silver, Gold) para estru
 - **Futuro**: Idea de consumir directamente la API de FIRMS para datos en tiempo real, representado por el flujo continuo en el diagrama.
 
 ## Contenido del Proyecto
-
 Este proyecto de Astronomer incluye los siguientes archivos y carpetas clave:
+Formato del proyecto:
+![Diagrama del flujo ETL](./public/etl-firms.png)
 
 - **dags/**: Contiene los archivos Python para los DAGs de Airflow.
   - `add_modis_data.py`: DAG principal que implementa el pipeline ETL completo, incluyendo extracción, validación, carga en Bronze y ejecución de DBT.
