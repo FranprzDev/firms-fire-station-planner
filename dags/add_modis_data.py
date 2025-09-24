@@ -140,7 +140,7 @@ def load_bronze_data(**context) -> None:
     except Exception as e:
         logger.error(f"Error cargando datos Bronze: {e}")
         raise
-
+    
 def load_data(**context) -> None:
     temp_path = context['ti'].xcom_pull(task_ids='extract_data_raw')
     df = pd.read_csv(temp_path)
@@ -156,7 +156,7 @@ def load_data(**context) -> None:
     df.to_sql('fires_raw', engine, if_exists='replace', index=False)
     os.remove(temp_path)
     logger.info(f"Datos raw cargados exitosamente: {len(df)} registros en PostgreSQL")
-
+    
 with DAG(
     dag_id='complete_etl_pipeline',
     schedule=None,
