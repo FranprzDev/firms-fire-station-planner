@@ -80,7 +80,7 @@ Este proyecto de Astronomer incluye los siguientes archivos y carpetas clave:
 Formato del proyecto:
 ![Diagrama del flujo ETL](./public/etl-firms.png)
 Como funciona el DAG?
-![Funcionamiento del Dag](./PUBLIC/howworks.png)
+![Funcionamiento del Dag](./public/howworks.png)
 
 - **dags/**: Contiene los archivos Python para los DAGs de Airflow.
   - `add_modis_data.py`: DAG principal que implementa el pipeline ETL completo, incluyendo extracción, validación, carga en Bronze y ejecución de DBT.
