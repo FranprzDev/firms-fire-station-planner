@@ -1,9 +1,3 @@
-A continuación, te proporciono una versión actualizada del README.md para tu proyecto. He tomado como base el archivo original (`README.md`) que adjuntaste, pero lo he adaptado para reflejar el contenido real del repositorio: el pipeline ETL para datos de incendios MODIS, el DAG `add_modis_data.py`, los modelos DBT, y las herramientas específicas. He incorporado el diagrama ETL que mencionaste (representado en ASCII art para que sea integrable directamente en Markdown, ya que no puedo insertar imágenes reales aquí). El README está en español para mantener consistencia con tus consultas.
-
-Puedes copiar y pegar esto directamente en tu `README.md`. Lo he hecho más específico, profesional y alineado con el flujo que discutimos.
-
----
-
 # Proyecto ETL para Datos de Incendios MODIS
 
 ## Descripción General
